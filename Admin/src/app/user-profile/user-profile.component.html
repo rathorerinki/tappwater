@@ -1,0 +1,456 @@
+
+<head>
+    <style>
+
+        </style>
+</head>
+<body>
+  
+    <div class="panel-header">
+        <div class="header text-center">
+          <h2 class="title">
+            <!-- Add Report -->
+            {{ 'HOME.Edit_report' | translate }}
+          </h2>
+        
+        
+        </div>
+      </div>
+      <div class="">
+        <div class="row">
+          <!--[total payment]-->
+          <div class="col-md-12">
+            <div class="card">
+               
+              <div class="card-body">
+                <!--[content]-->
+    
+                <!--[table]-->
+              
+                <div class="row" >
+                    <!-- <div class="col-md-1"></div> -->
+                    <div class="col-md-6">
+                        <div class="header text-center">
+                            <h3 class="title">  {{ 'HOME.subheading' | translate }}</h3>
+                          </div>
+                    </div>
+                    <div class="col-md-5"></div>
+               
+                    <!-- <div class="col-md-1"></div> -->
+                    <div class="col-md-12">
+                      <!-- <mat-card>
+                        <form #form="ngForm">  
+                            <div >           
+                              <div class="row">
+                                <div class="col-md-4 col-xs-12 col-sm-6">
+                                  <div class="form-group">
+                                    <label>{{ 'HOME.city' | translate }}</label>
+                                      <div>
+                                        <span  class="color_text">                                           
+                                         <input type="text" class="div_1" [placeholder]="'HOME.city_enter' | translate"  [(ngModel)]="data.city" [ngModelOptions]="{standalone: true}" >
+                                        </span>
+                                      </div>
+                                  </div>
+                                </div>
+
+                                <div class="col-md-4 col-xs-12 col-sm-6">
+                                    <div class="form-group">
+                                      <label>{{ 'HOME.Province' | translate }}</label>
+                                        <div>
+                                          <span  class="color_text">                                           
+                                           <input type="text" class="div_1" [placeholder]="'HOME.Province_enter' | translate"  [(ngModel)]="data.province" [ngModelOptions]="{standalone: true}">
+                                          </span>
+                                        </div>
+                                    </div>
+                                  </div>
+                                <div class="col-md-4 col-xs-12 col-sm-6">
+                                  <div class="form-group">
+                                    <label> {{ 'HOME.Autonomous_region' | translate }} </label>
+                                      <div >
+                                        <span  class="color_text">
+                                          
+                                          <input type="text" class="div_1" [placeholder]="'HOME.Autonomous_region_enter' | translate "  [(ngModel)]="data.area" [ngModelOptions]="{standalone: true}">
+                                        </span>
+                                      </div>
+                                  </div>
+                                </div>
+                                
+                                <div class="col-md-4 col-xs-12 col-sm-4">
+                                 <div class="form-group">
+                                    <label> {{ 'HOME.Country' | translate }}</label>
+                                      <div >
+                                        <span  class="color_text">
+                                          <select name="country" id="country" class="div_1" [(ngModel)]="country" (change)="data.country=$event.target.value">
+                                              <option *ngFor="let option of countriesOptions" [value]="option" >  
+                                          </select>
+                                        </span>
+                                      </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-3 col-xs-12 col-sm-4">
+                                    <div class="form-group">
+                                       <label>{{ 'HOME.Post_code_Range' | translate }} </label>
+                                         <div>
+                                           <span  class="color_text">
+                                             <input  class="div_1" [placeholder]="'HOME.From' | translate" type="text" [(ngModel)]="data.post_from" [ngModelOptions]="{standalone: true}">
+                                           </span>
+                                         </div>
+                                     </div>
+                                   </div>
+                                   <div class="col-md-3 col-xs-12 col-sm-4">
+                                       <div class="form-group">
+                                        
+                                          <label> </label>
+                                            <div>
+                                              <span  class="color_text">
+                                                <input  class="div_1" type="text" [placeholder]="'HOME.To' | translate" [(ngModel)]="data.post_to" [ngModelOptions]="{standalone: true}">
+                                              </span>
+                                            </div>
+                                        </div>
+                                      </div>
+                                       <div class="col-md-3 col-xs-11 col-sm-11">
+                                    <div class="form-group">
+                                       <label>{{'HOME.Average_data_range' | translate}}</label>
+                                         <div >
+                                           <span  class="color_text">
+                                                 <input name="averageDataRange"  type="checkbox" [(ngModel)]="data.averageDataRange"/>
+
+                                           </span>
+                                         </div>
+                                     </div>
+                                   </div>
+                                   <div *ngIf = "data.averageDataRange" class="col-md-3 col-xs-11 col-sm-11">
+                                    <div class="form-group">
+                                       <label>{{'HOME.Start_date' | translate}}</label>
+                                         <div >
+                                           <span  class="color_text">
+                                             <input class="div_1" name="start_date" type="date"  [(ngModel)]="data.start_date"> 
+                                           </span>
+                                         </div>
+                                     </div>
+                                   </div>
+                                   <div *ngIf = "data.averageDataRange" class="col-md-3 col-xs-11 col-sm-11">
+                                    <div class="form-group">
+                                       <label>{{'HOME.End_date' | translate}}</label>
+                                         <div >
+                                           <span  class="color_text">
+                                             <input class="div_1" name="end_date" type="date"  [(ngModel)]="data.end_date">
+                                           </span>
+                                         </div>
+                                     </div>
+                                   </div>
+                                      <div  *ngIf = "!data.averageDataRange"  class="col-md-2 col-xs-11 col-sm-11">
+                                          <div class="form-group">
+                                             <label>{{'HOME.Date' | translate}}</label>
+                                               <div >
+                                                 <span  class="color_text">
+                                                   <input class="div_1" type="date" [(ngModel)]="data.date" [ngModelOptions]="{standalone: true}">
+                                                 </span>
+                                               </div>
+                                           </div>
+                                         </div>
+                              </div>
+                              <div class="row">                       
+                               
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label> {{'HOME.Drinkable' | translate}}</label>
+                                        <div >
+                                          <span  class="color_text">
+                                              
+                                            <input class="div_1" type="text" [value]="water_drinkable" [(ngModel)]="data.drinkable" [ngModelOptions]="{standalone: true}">
+                                          </span>
+                                        </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="col-md-8">
+                                    <div class="form-group">
+                                      <label> {{'HOME.Utlity' | translate}}</label>
+                                        <div >
+                                            
+                                          <span  class="color_text">
+                                              <input  class="div_1" type="text" [placeholder]="'HOME.Utlity_enter' | translate" [(ngModel)]="data.utlity_enter" [ngModelOptions]="{standalone: true}">
+
+                                          </span>
+                                        </div>
+                                    </div>
+                                  </div>
+                             
+                                  
+                                  <div class="col-md-12">
+                                    <div class="form-group">
+                                      <label> Description</label>
+                                        <div >
+                                            
+                                          <span  class="color_text">
+                                              <input  class="div_1" type="text" placeholder="Description"  name="utlity_enter" [(ngModel)]="data.description">
+                                          </span>
+                                        </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="col-md-12">
+                                    <div class="form-group">
+                                      <label> Blog link</label>
+                                        <div >
+                                          
+                                          <span  class="color_text">
+                                              <input  class="div_1" type="text" placeholder="blog link"  name="blog_link" [(ngModel)]="data.blog_link">
+                                          </span>
+                                        </div>
+                                    </div>
+                                  </div>
+                              
+                              </div>
+
+                              
+                              <div class="row">
+                                
+                              </div>
+              
+                              <div class="row">
+                                <div class="col-md-9"></div>
+                                  <div class="col-md-3">
+                                    <br>
+                                    <br>
+                                    <br>
+                                  <div class="form-group">
+                                   
+                                      <div >
+                                        <span  class="color_text">
+                                          <input class="div_1" (click)="next()" type="submit" [value]="'HOME.Next' | translate" style="background: #87aeae;
+                                          color: white;
+                                          font-weight: 800;
+                                          font-size: large;">
+                                        </span>
+                                      </div>
+                                  </div>
+                                </div>
+                              </div>
+                         </div>
+                        </form>
+                    </mat-card> -->
+                     
+                    <mat-card>
+                      <form >  
+                          <div > 
+                            <div class="row">
+                              <div class="col-md-4">
+                                <mat-form-field>
+                                  <mat-select placeholder="Country" [(ngModel)]='data.country'  [ngModelOptions]="{standalone: true}"(selectionChange)="data.country=$event.value">
+                                    <mat-option *ngFor="let option of countriesOptions" [value]="option">{{option}}</mat-option>
+                                  </mat-select>
+                                </mat-form-field>
+                              </div>
+                              <div class="col-md-4">
+                                <mat-form-field>
+                                  <input matInput placeholder="Province"[ngModelOptions]="{standalone: true}"  [(ngModel)]="data.province">
+                                </mat-form-field>
+
+                              </div>
+                              <div class="col-md-4">                                    
+                                <mat-form-field>
+                                  <input matInput placeholder="Zone" [ngModelOptions]="{standalone: true}" [(ngModel)]="data.area">
+                                </mat-form-field>
+                              </div>
+                            </div>
+                            <div class="row style_change" *ngFor="let City of Cities; let i = index;">
+
+                              <div class="col-md-1">                                
+                                
+                                <button *ngIf="i==(Cities.length-1)" mat-button (click)="addCities()"><abbr title="Add city">
+                                  
+                                  <!-- <i class="fa fa-plus-circle" aria-hidden="true"></i> -->
+                                  <img src='./assets/image11.png'>
+                                </abbr></button>
+
+                                <button style="background-color: red;padding:0px" *ngIf="i!=(Cities.length-1)" type="button" class="btn btn-danger btn-sm" (click)="remove_city(i)">City {{i+1}} Remove 
+                                </button>
+                              </div>
+                              <div class="col-md-3">
+                                <mat-form-field>
+                                  <input matInput placeholder="City {{i+1}}"  [(ngModel)]='City.city'   name="City_{{i}}">
+                                </mat-form-field>
+                              </div>
+                              <div class="col-md-2">
+                                <mat-form-field>
+
+                                  <input matInput placeholder="Start post code" name="post_form_{{i}}" [ngModelOptions]="{standalone: true}" [(ngModel)]='City.post_from'>
+
+                                </mat-form-field>
+
+                              </div>
+                              <div class="col-md-2">
+                                <mat-form-field>
+                                  <input matInput placeholder="End post code" name="post_to_{{i}}" [ngModelOptions]="{standalone: true}" [(ngModel)]='City.post_to'>
+                                </mat-form-field>
+
+                              </div>
+                              <div class="col-md-4 col-xs-12 col-sm-4" *ngFor="let address of Cities[i].random_post_code; let j = index;">     
+                                
+                                <!-- {{address}}  -->
+                                <div class="row">
+                                  <div class="col-md-8">
+                                    <mat-form-field>
+                                      <input matInput placeholder="Post code {{j + 1}}" [(ngModel)]="address.Post_code_random" name="address_{{i}}_{{j}}">
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <button style="background-color: red" *ngIf="j!=(Cities[i].random_post_code.length-1)" type="button" class="btn btn-danger btn-sm" (click)="removeAddress(i,j)"><i class="fa fa-times" aria-hidden="true"></i>
+                                    </button>
+
+                                  
+                                    <button *ngIf="j==(Cities[i].random_post_code.length-1)" mat-button (click)="addAddress(i)"><abbr title="Add Post code">
+                                  
+                                      <i class="fa fa-plus-circle" aria-hidden="true" style="color:red"></i>
+                                      <img src='./assets/post.jfif' style="width:35px;">
+                                    </abbr></button>
+                                  </div>
+
+                                </div>
+
+                        
+                               </div>
+                             
+                            </div>
+                         <div class="row">
+                              <div class="col-md-4">                                    
+                                <mat-form-field>
+                                  <input matInput placeholder="Utlity" [ngModelOptions]="{standalone: true}" [(ngModel)]="data.utlity_enter">
+                                </mat-form-field>
+                              </div>
+                              <div class="col-md-4">
+                                <mat-form-field>
+                                  <mat-select placeholder="Drinkable(Y/N)"  [ngModelOptions]="{standalone: true}" [(ngModel)]='data.drinkable' (selectionChange)="data.drinkable=$event.value">
+                                    <mat-option value="Yes">Yes</mat-option>
+                                    <mat-option value="No">No</mat-option>
+                                    <mat-option value="Under Review">Under Review</mat-option>
+                                  </mat-select>
+                                </mat-form-field>
+                              </div>
+                              
+                            </div>
+
+
+                            <div class="row">
+                              <div class="col-md-2">
+                                <mat-checkbox  [ngModelOptions]="{standalone: true}" [(ngModel)]="data.averageDataRange" (change)="data.averageDataRange=$event.checked">Average data range</mat-checkbox>
+                              </div>
+                              <div class="col-md-2" *ngIf = "!data.averageDataRange">                                    
+                                <mat-form-field >
+                                  <input matInput [matDatepicker]="picker1" placeholder="Date of report"  [ngModelOptions]="{standalone: true}" [(ngModel)]='data.reported_date'>
+                                  <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                                  <mat-datepicker #picker1></mat-datepicker>
+                                </mat-form-field>                                   
+                              </div>
+
+                              <div class="col-md-2" *ngIf = "data.averageDataRange">
+                                <mat-form-field *ngIf = "data.averageDataRange">
+                                  <input matInput [matDatepicker]="picker1" placeholder="Start date" [ngModelOptions]="{standalone: true}" [(ngModel)]="data.start_date">
+                                  <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                                  <mat-datepicker #picker1></mat-datepicker>
+                                </mat-form-field>
+                              </div>
+                              <div class="col-md-4" *ngIf = "data.averageDataRange">
+                                <mat-form-field>
+                                    <input matInput [matDatepicker]="picker2" [ngModelOptions]="{standalone: true}" placeholder="End date" [(ngModel)]="data.end_date">
+                                    <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                                    <mat-datepicker #picker2></mat-datepicker>
+                                  </mat-form-field>
+                                  
+                                <!-- </mat-form-field> -->
+                              </div>
+
+                              <div class="col-md-4">
+                                <mat-form-field>
+                                    <input matInput [matDatepicker]="picker" placeholder="Date submitted"   [ngModelOptions]="{standalone: true}" [(ngModel)]='data.submitted_date'>
+                                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                    <mat-datepicker #picker></mat-datepicker>
+                                  </mat-form-field>
+                                  
+                                <!-- </mat-form-field> -->
+                              </div>
+                              
+                            </div>
+                            <div class="row"> 
+                              <div class="col-md-8">                                    
+                                <mat-form-field>
+                                  <input matInput placeholder="Blog link (EN)"   [ngModelOptions]="{standalone: true}" [(ngModel)]="data.blog_english">
+                                </mat-form-field>
+                              </div>
+                              <div class="col-md-8">                                    
+                                <mat-form-field>
+                                  <input matInput placeholder="Blog link (Local language)"  [ngModelOptions]="{standalone: true}" [(ngModel)]="data.blog_local">
+                                </mat-form-field>
+                              </div>
+                            </div>
+      
+                            
+
+                            
+                            
+
+            
+                            <div class="row">
+                              <div class="col-md-9"></div>
+                              <!-- <div class="col-md-2">
+                                  <br>
+                                  <br>
+                                  <br>
+                                <div class="form-group">
+                                 
+                                    <div >
+                                      <span  class="color_text">
+                                        <input class="div_1" (click)="save()" type="submit" [value]="'HOME.save' | translate" style="background: #77d7d7;
+                                        color: white;
+                                        font-weight: 800;
+                                        font-size: large;">
+                                      </span>
+                                    </div>
+                                </div>
+                              </div> -->
+                                <div class="col-md-3">
+                                  <br>
+                                  <br>
+                                  <br>
+                                <div class="form-group">
+                                 
+                                    <div >
+                                      <span  class="color_text">
+                                        <input class="div_1" (click)="next()" type="submit" [value]="'HOME.Next' | translate" style="    background: #87aeae;
+                                        color: white;
+                                        font-weight: 800;
+                                        font-size: large;">
+                                      </span>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                       </div>
+                      </form>
+                  </mat-card>
+                 
+                    </div>
+                </div>
+
+
+
+
+            
+
+
+               
+                  
+                <!-- </div> -->
+             
+    
+    
+              </div>
+            </div>
+          </div>
+          <!--[total payment end]-->
+          
+        </div>
+      </div>
+</body>

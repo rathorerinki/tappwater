@@ -1,0 +1,63 @@
+<!-- <app-topbar></app-topbar> -->
+<div class="app-topbar">
+     
+      <mat-toolbar>
+        
+            <div class="left"><img src="/../../assets/logo-wbg.svg"></div>
+     
+      </mat-toolbar>
+    </div>
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6 col-xs-12 image">
+
+        <h1>
+            {{ 'Nodata.heading1' | translate }}<br>
+            {{ 'Nodata.heading2' | translate }}
+          
+        </h1>
+        <p>
+            {{ 'Nodata.subheading' | translate }}
+            <!-- But please provide your e-mail address and we will notive you as soon as it’s available. -->
+        </p>
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="form">
+            <div class="form-group">
+              
+                <input type="text" [placeholder]="'Nodata.placeholder' | translate" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" class="input1" />
+                <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                    <br>
+                    <div *ngIf="f.email.errors.required" style="color:red">
+                        *{{ 'Nodata.validation1' | translate }}
+                        </div>
+                    <div *ngIf="f.email.errors.email" style="color:red">*
+                        {{ 'Nodata.validation2' | translate }}
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <div style="text-align: left;margin-left: 8%;
+            margin-right: 4%;">
+            <input autocomplete="off" type="checkbox" name="signup" value="signup" class="checkbox-circle"> {{ 'Nodata.check' | translate }} 
+            
+            </div>
+            <div class="form-group">
+                <button class="button_reset btn btn-primary" [disabled]="loading">{{ 'Nodata.submit' | translate }}</button>
+            </div>
+        </form>
+
+
+
+    </div>
+<div class="col-md-3"></div>
+
+
+</div>
+<div class="row">
+    
+    <div class="top">
+        <span>* TAPP Water will continue to add cities in Spain over the coming <br>months targeting 98% of the population by end of 2020.</span>
+    
+    </div>
+</div>

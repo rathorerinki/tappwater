@@ -1,0 +1,141 @@
+.btn-danger {
+    background-color:#ddd;
+    color: black;
+}
+/*.btn-danger:hover {
+  background-color: orange;
+  color: white;
+}*/
+.btn-danger:active {
+  background-color: orange;
+ 
+}
+
+.font_color{
+/*color:orangered;*/
+color:black;
+}
+.ne {
+    height: 155px;
+}
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 18px;
+  width: 80%;
+}
+img.image_1233.ng-star-inserted {
+  width: 10%;
+  position: absolute;
+  top: 34%;
+  left: 41%;
+}
+
+.dialogbox.ng-star-inserted {
+  position: absolute;
+  top: 15%;
+  /* background: blue; */
+  width: 79%;
+  left: 8%;
+  padding:2%;
+  transform: translate(-50%, -50%);
+}
+
+.dialogbox .table1 {
+  font-family: arial, sans-serif;
+  /* border-collapse: collapse; */
+  width: 100%;
+
+}
+
+.table-dark th, .table-dark td, .table-dark thead th {
+  border-color: #32383e;
+  border: none;
+}
+.dialogbox .table1 td, .dialogbox .table1 th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+table.table_changes {
+  margin-top: -10px;
+}
+mat-card#excel_table {
+  position: absolute;
+  top: 13%;
+}
+.dialogbox .table1 tr:nth-child(even) {
+  background-color: #dddddd45;
+}
+td.mat-cell.cdk-column-Autonomous.mat-column-Autonomous.ng-star-inserted {
+  word-break: break-all;
+  width: 14%;
+}
+td.mat-cell, td.mat-footer-cell, th.mat-header-cell {
+    padding: 0;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom: solid 1px #dfdbdb;
+    word-wrap: break-word;
+    padding-right: 20px;
+}
+
+td.mat-cell.cdk-column-other_code.mat-column-other_code.ng-star-inserted {
+  word-wrap: break-word !important;
+  white-space: unset !important;
+  flex: 0 0 100px !important;
+  width: 109px !important;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+.card {
+  border: 0;
+  border-radius: 0.1875rem;
+  display: inline-block;
+  position: relative;
+  /* width: max-content; */
+  margin-bottom: 20px;
+  box-shadow: 0 1px 15px 1px rgba(39, 39, 39, 0.1);
+}
+.mat-icon-button {
+    padding: 0;
+    min-width: 0;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    line-height: 40px;
+    border-radius: 50%;
+    background: #f96332;
+   
+}
+
+.mat-paginator-icon {
+    width: 28px;
+    color: white;
+    fill: currentColor;
+    /* background: white; */
+}
+
+.mat-paginator-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    min-height: 60px;
+    padding: 0 15px;
+    flex-wrap: wrap-reverse;
+    width: 100%;
+}
+
+.mat-elevation-z8{
+  box-shadow: unset;
+}

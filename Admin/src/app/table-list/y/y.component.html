@@ -1,0 +1,38 @@
+<button  (click)="onNoClick()" style="float: right;"><i class="fa fa-times" aria-hidden="true"></i>
+</button>
+<br>
+<div mat-dialog-content>
+    <table class="table1">
+        <tr>
+        <th>S.No</th>
+        <th>City</th>
+        <th>Post code range</th>
+        <th>Other post code</th>
+        </tr>
+        <tr *ngFor='let each_city of data;let i=index'>
+        <td>{{i+1}}</td>
+        <td>{{each_city.city}}</td>
+        <td>{{each_city.post_from}} - {{each_city.post_to}}</td>
+        <td>
+            <span *ngFor='let postcode of each_city.random_post_code;let i=index'>
+            <!-- {{postcode.Post_code_random }} -->
+            {{(postcode.Post_code_random == undefined || postcode.Post_code_random == '')?"-":postcode.Post_code_random +", "}}
+            </span>
+            <!-- {{each_city.random_post_code}} -->
+        </td>
+        </tr>          
+    </table>  
+    <mat-paginator [length]="data.length"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]">
+</mat-paginator>
+    
+<!-- <div *ngFor="value of all_data">
+    {{value.value}}
+</div>
+    {{data.cities}} -->
+</div>
+<div mat-dialog-actions>
+  <!-- <button mat-button (click)="onNoClick()">No Thanks</button> -->
+  <!-- <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button> -->
+</div>

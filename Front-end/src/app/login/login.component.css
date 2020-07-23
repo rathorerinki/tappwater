@@ -1,0 +1,193 @@
+
+/* input:focus ~ .floating-label {
+    top: 7%;
+    bottom: 12px;
+    left: 20px;
+    font-size: 22px;
+    opacity: 1;
+  } */
+  .button {
+    color: white;
+    height: 55px;
+    width: 100%;
+    background: teal;
+    border-radius: 30px;
+    border: 1px solid teal;
+    margin-top: 10%;
+}
+.button_reset{
+    color: teal;
+    height: 55px;
+    width: 100%;
+    background: white;
+    border-radius: 30px;
+    border: 2px solid teal;
+    margin-top: 24px;
+
+}
+  /* .floating-label {
+  position: absolute;
+  pointer-events: none;
+  left: 20px;
+  font-size: 22px;
+  top: 14%;
+ 
+  transition: 0.2s ease all;
+  color: #b2b2b2;
+  }  */
+
+
+  /* .lastname {
+    position: absolute;
+    pointer-events: none;
+    left: 20px;
+    font-size: 22px;
+    top: 39%;
+  
+    transition: 0.2s ease all;
+    color: #b2b2b2;
+    }  */
+.margin-top{
+margin-top:73px;
+
+}
+    /* input:focus ~ .lastname {
+        top: 34%;
+        bottom: 12px;
+        left: 20px;
+        font-size: 22px;
+        opacity: 1;
+      } */
+
+     /* ::ng-deep mat-form-field:focus {
+    border-bottom:3px solid  #09aba9;
+    outline: 2px solid white;
+  } */
+
+
+  ::ng-deep .mat-focused .mat-form-field-label {
+    /*change color of label*/
+    color: gray !important;
+   }
+  
+
+  
+  ::ng-deep.mat-form-field-ripple {
+   /*change color of underline when focused*/
+   background-color: #09aba9 !important;;
+  }
+  /* ::ng-deep .mat-form-field-infix {
+    display: block;
+    position: relative;
+    flex: auto;
+    min-width: 0;
+    width: 180px;
+    font-size: 21px;
+    margin-top: 23px;
+} 
+
+/* 
+::ng-deep .mat-input-element {
+    caret-color: red;
+}
+input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    width: 100%;
+    margin-top: 22px;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+} */
+.top_pending{
+
+    text-align:center;
+ 
+}
+
+
+.top_pending h1{
+    color:#003955;
+    font-family: Ubuntu;
+}
+.div1{
+  
+    height: 260px;
+    width: 234px;   
+    /* margin-left: 292px; */
+    margin-left: 65px;
+    width: 234px;
+    height: 260px;
+    background-color: #c7e8f2;
+    opacity: 20%;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 65px;
+    transform: rotate(-30deg);
+    border-top-left-radius: 32px;
+    border-top-right-radius: 32px;
+    margin-top: 71px;
+}
+
+.div2{
+  
+    height: 260px;
+    width: 234px;   
+    /* margin-left: 292px; */
+    margin-left: 65px;
+    width: 234px;
+    height: 260px;
+    background-color: #c7e8f2;
+    opacity: 20%;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 65px;
+    transform: rotate(-30deg);
+    border-top-left-radius: 32px;
+    border-top-right-radius: 32px;
+    margin-top: 71px;
+}
+.icons{
+    margin-top: 71px;
+    /* width: 234px;
+    height: 260px; */
+  
+}
+.margin{
+    margin-top:111px;
+}
+
+.para{
+    font-size: 25.4px;
+    font-family: Ubuntu-Medium;
+}
+.icons img{
+   
+    width: 234px;
+    height: 260px;
+}
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+.div3{
+  
+    height: 260px;
+    width: 234px;   
+    /* margin-left: 292px; */
+    margin-left: 65px;
+    width: 234px;
+    height: 260px;
+    background-color: #c7e8f2;
+    opacity: 20%;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 65px;
+    transform: rotate(-30deg);
+    border-top-left-radius: 32px;
+    border-top-right-radius: 32px;
+    margin-top: 71px;
+}

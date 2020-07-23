@@ -1,0 +1,94 @@
+<div class="logo">
+    <a href="#" class="simple-text">
+        <div class="logo-img">
+            <img src="./assets/img/logo-wbg.svg" width="200px" />
+            <!-- <h3>TAPP Water</h3> -->
+        </div>
+    </a>   
+</div>
+<div class="sidebar-wrapper">
+   <ul class="nav">   
+        <li routerLinkActive="active"  class="nav-item" *ngIf="router.url=='/typography' || router.url=='/user-profile' || router.url=='/table-list' || router.url=='/icons' || router.url=='/maindashboard' ||router.url=='/KPIs' ||router.url=='/users' ||router.url=='/country'">
+            <a routerLink="/typography" (click)="customers()">
+                <i class="now-ui-icons education_atom"></i>               
+                 <p>  {{ 'HOME.Add_report' | translate }} </p>
+            </a>            
+        </li> 
+        <li routerLinkActive="active"  class="nav-item" *ngIf="router.url=='/notifications'">
+            <a routerLink="/notifications" (click)="customers()">
+                <i class="now-ui-icons education_atom"></i>               
+                <!-- <p>Add Report</p> -->
+                 <p> {{ 'HOME.Add_report' | translate }} </p>
+              </a>
+            
+        </li>       
+
+        <li routerLinkActive="active"  class="nav-item" *ngIf="router.url=='/maindashboard'">
+            <a routerLink="/maindashboard" (click)="customers()">
+                <i class="now-ui-icons design_bullet-list-67"></i>
+                 <p>  {{ 'HOME.Edit_report' | translate }}  </p>
+            </a>            
+        </li> 
+        <li routerLinkActive="active"  class="nav-item" *ngIf="router.url=='/user-profile'">
+            <a routerLink="/user-profile" (click)="customers()">
+                <i class="now-ui-icons design_bullet-list-67"></i>
+                 <p> {{ 'HOME.Edit_report' | translate }} </p>
+            </a>            
+        </li> 
+
+        <li routerLinkActive="active"  class="nav-item" *ngIf="router.url=='/icons'">
+            <a routerLink="/icons" (click)="customers()">
+                <i class="now-ui-icons design_bullet-list-67"></i>
+                 <p> {{ 'HOME.Edit_report' | translate }} </p>
+            </a>            
+        </li> 
+        <li routerLinkActive="active"  class="nav-item">
+            <a routerLink="/table-list" (click)="customers()">
+                <i class="now-ui-icons design_bullet-list-67"></i>
+                <!-- <p>View All Reports</p> -->
+                 <p> {{ 'HOME.View_report' | translate }} </p>
+            </a>
+            
+        </li>        
+        <li routerLinkActive="active"  class="nav-item">
+            <a routerLink="/KPIs" (click)="customers()">
+                <i class="now-ui-icons fa fa-question-circle"></i>                
+                <p> {{ 'HOME.Change_values' | translate }} </p>
+            </a>            
+        </li> 
+        <li routerLinkActive="active"  class="nav-item">
+            <a routerLink="/country" >
+                <i class="now-ui-icons fa fa-globe"></i>              
+                 <p> Country</p>
+            </a>            
+        </li> 
+
+        <li routerLinkActive="active"  class="nav-item">
+            <a routerLink="/users" >
+                <i class="now-ui-icons fa fa-question-circle"></i>              
+                 <p> Request for postcode</p>
+            </a>            
+        </li> 
+        
+       
+
+        <!-- <li routerLinkActive="active"  class="nav-item" >
+            <a  (click)="payment()">
+                <i class="now-ui-icons education_atom"></i>
+              <b>{{ 'HOME.SELECT' | translate }}</b> &nbsp;&nbsp;<select #langSelect (click)=function_($event)>
+                <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
+              </select>               
+                
+            </a>          
+            
+        </li>  -->
+    </ul>
+   
+   
+   
+   
+   
+ 
+   
+    
+</div>

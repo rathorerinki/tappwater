@@ -1,0 +1,15 @@
+.navbar p {
+    display: inline-block;
+    margin: 0;
+    line-height: 2em;
+    font-size: 1.4em;
+    font-weight: 700;
+}
+.navbar .navbar-nav .nav-link i.fa, .navbar .navbar-nav .nav-link i.now-ui-icons {
+    font-size: 24px;
+    position: relative;
+    top: 3px;
+    text-align: center;
+    width: 21px;
+    color: red;
+}

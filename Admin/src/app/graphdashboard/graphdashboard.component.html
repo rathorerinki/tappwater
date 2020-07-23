@@ -1,0 +1,1468 @@
+
+<head>
+        <style>
+      
+            </style>
+      </head>
+      <body>
+      
+        <div class="panel-header">
+            <div class="header text-center">
+              <h2 class="title">
+                <!-- Add Report -->
+                {{ 'HOME.Edit_report' | translate }}
+              </h2>
+            
+            
+            </div>
+          </div>
+          <div class="">
+            <div class="row">
+              <!--[total payment]-->
+              <div class="col-md-12">
+                <div class="card">
+                   
+                  <div class="card-body">
+                    <!--[content]-->
+        
+                    <!--[table]-->
+                
+      
+      
+      
+      
+                    <div class="row" >
+                     
+                        <div class="col-md-7">
+                            <div class="header text-center">
+                                <h3 class="title">{{ 'HOME.subheading' | translate }}</h3>
+                              </div>
+      
+                        </div>
+                        <div class="col-md-2">
+                            
+                            <div class="form-group">
+                                 
+                                <div >
+                                  <span  class="color_text">
+                                    <input class="div_1" (click)="back()" type="submit" [value]="'HOME.Back' | translate " style="background: #303232a3;
+                                    color: white;
+                                    font-weight: 800;
+                                    font-size: large;">
+                                  </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                           
+                            <div class="form-group">                         
+                                <div >
+                                  <span  class="color_text">
+                                    <input class="div_1" (click)="next_2()" type="submit" [value]="'HOME.Done' | translate " style="background: #77d7d7;
+                                    color: white;
+                                    font-weight: 800;
+                                    font-size: large;">
+                                  </span>
+                                </div>
+                            </div>
+                        
+                    </div>
+                         
+                        
+                          
+                        <!-- start left  -->
+                        <div class="col-md-6">
+                            <!-- start Water safety -->
+                          <mat-card class="table input1">
+                          <div class="header text-center">
+                            <h3 class="title">{{'HOME.Minerals' | translate}}</h3>
+                          </div>
+      
+                          <!-- header -->
+                          <div class="row ">
+                            <div class="col-md-4 col-sm-4 col-4">
+                              <div class="head special1">{{'HOME.Particulars' | translate}}</div>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-4">
+                              <div class="head special1">{{'HOME.Value' | translate}} </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-4">
+                              <div class="head special1">{{'HOME.Unit' | translate}}</div>
+                            </div>
+                          </div>
+                            <!-- header -->
+                            <!-- body -->
+      
+      
+                          <div class="row">
+                              <div class="col-md-4 col-sm-4 col-4">
+                                  <div class="head special">
+                                      {{'HOME.Magnesium' | translate}}
+                                  </div>
+      
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-4">
+                                    <div class="head">
+                                        <input type="text" >
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-4">
+                                    <div class="head">
+                                      <select class="input_select">
+                                          <option value="volvo" hidden>Select unit</option>
+                                          <option value="volvo">Unit</option>
+                                            <option value="saab">unit</option>    
+                                          
+                                        </select>
+                                        <!-- <input type="text" > -->
+                                    </div>
+                                </div>
+                              </div>
+      
+                              <div class="row">
+                                <div class="col-md-4 col-sm-4 col-4">
+                                    <div class="head special">
+                                          {{'HOME.Calcium' | translate}}
+                                    </div>
+      
+                                  </div>
+                                  <div class="col-md-4 col-sm-4 col-4">
+                                      <div class="head">
+                                          <input type="text" >
+                                      </div>
+                                  </div>
+                                  <div class="col-md-4 col-sm-4 col-4">
+                                      <div class="head">
+                                        <select class="input_select">
+                                            <option value="volvo" hidden>Select unit</option>
+                                            <option value="volvo">Unit</option>
+                                            <option value="saab">unit</option>                                       
+                                        </select>
+                                        
+                                      </div>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-md-4 col-sm-4 col-4">
+                                      <div class="head special">
+                                           {{'HOME.Potassium' | translate}}
+                                      </div>
+      
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 col-4">
+                                        <div class="head">
+                                            <input type="text" >
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 col-4">
+                                        <div class="head">
+                                          <select class="input_select">
+                                              <option value="volvo" hidden>Select unit</option>
+                                              <option value="volvo">Unit</option>
+                                              <option value="saab">unit</option>                                       
+                                          </select>
+                                        </div>
+                                    </div>
+                                  </div>
+      
+      
+                                  <div class="row">
+                                    <div class="col-md-4 col-sm-4 col-4">
+                                        <div class="head special">
+                                             {{'HOME.Chloride' | translate}}
+                                        </div>
+        
+                                      </div>
+                                      <div class="col-md-4 col-sm-4 col-4">
+                                          <div class="head">
+                                              <input type="text" >
+                                          </div>
+                                      </div>
+                                      <div class="col-md-4 col-sm-4 col-4">
+                                          <div class="head">
+                                            <select class="input_select">
+                                                <option value="volvo" hidden>Select unit</option>
+                                                <option value="volvo">Unit</option>
+                                                <option value="saab">unit</option>                                       
+                                            </select>
+                                          </div>
+                                      </div>
+                                    </div>
+                                
+                            <!-- body -->
+                              </mat-card>
+                            <!-- end Water safety -->
+      
+                            <!-- start general -->
+                          <mat-card class="table input1">
+                              <div class="header text-center">
+                                <h3 class="title">   {{'HOME.Metals' | translate}}</h3>
+                              </div>
+      
+                              <!-- header -->
+                              <div class="row ">
+                                <div class="col-md-4 col-sm-4 col-4">
+                                  <div class="head special1">{{'HOME.Particulars' | translate}}</div>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-4">
+                                  <div class="head special1">{{'HOME.Value' | translate}} </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-4">
+                                  <div class="head special1">{{'HOME.Unit' | translate}}</div>
+                                </div>
+                              </div>
+                                <!-- header -->
+                                <!-- body -->
+                          
+      
+                              <div class="row">
+                                  <div class="col-md-4 col-sm-4 col-4">
+                                      <div class="head special">
+                                           {{'HOME.Aluminium' | translate}}
+                                      </div>
+      
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 col-4">
+                                        <div class="head">
+                                            <input type="text" >
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 col-4">
+                                        <div class="head">
+                                          <select class="input_select">
+                                              <option value="volvo" hidden>Select unit</option>
+                                              <option value="volvo">Unit</option>
+                                                <option value="saab">unit</option>    
+                                              
+                                            </select>
+                                        </div>
+                                    </div>
+                                  </div>
+      
+                                  <div class="row">
+                                    <div class="col-md-4 col-sm-4 col-4">
+                                        <div class="head special">
+                                             {{'HOME.Antimony' | translate}}
+                                        </div>
+      
+                                      </div>
+                                      <div class="col-md-4 col-sm-4 col-4">
+                                          <div class="head">
+                                              <input type="text" >
+                                          </div>
+                                      </div>
+                                      <div class="col-md-4 col-sm-4 col-4">
+                                          <div class="head">
+                                            <select class="input_select">
+                                                <option value="volvo" hidden>Select unit</option>
+                                                <option value="volvo">Unit</option>
+                                                <option value="saab">unit</option>                                       
+                                            </select>
+                                          </div>
+                                      </div>
+                                    </div>
+      
+                                    <div class="row">
+                                      <div class="col-md-4 col-sm-4 col-4">
+                                          <div class="head special">
+                                               {{'HOME.Arsenic' | translate}}(F)
+                                          </div>
+      
+                                        </div>
+                                        <div class="col-md-4 col-sm-4 col-4">
+                                            <div class="head">
+                                                <input type="text" >
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-4 col-4">
+                                            <div class="head">
+                                              <select class="input_select">
+                                                  <option value="volvo" hidden>Select unit</option>
+                                                  <option value="volvo">Unit</option>
+                                                  <option value="saab">unit</option>                                       
+                                              </select>
+                                            </div>
+                                        </div>
+                                      </div>
+                                    <div class="row">
+                                      <div class="col-md-4 col-sm-4 col-4">
+                                          <div class="head special">
+                                            pH
+                                          </div>
+      
+                                        </div>
+                                        <div class="col-md-4 col-sm-4 col-4">
+                                            <div class="head">
+                                                <input type="text" >
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-4 col-4">
+                                            <div class="head">
+                                              <select class="input_select">
+                                                  <option value="volvo" hidden>Select unit</option>
+                                                  <option value="volvo">Unit</option>
+                                                  <option value="saab">unit</option>                                       
+                                              </select>
+                                            </div>
+                                        </div>
+                                      </div>
+      
+                                      <div class="row">
+                                        <div class="col-md-4 col-sm-4 col-4">
+                                            <div class="head special">
+                                                {{'HOME.Barium' | translate}}
+                                            </div>
+      
+                                          </div>
+                                          <div class="col-md-4 col-sm-4 col-4">
+                                              <div class="head">
+                                                  <input type="text" >
+                                              </div>
+                                          </div>
+                                          <div class="col-md-4 col-sm-4 col-4">
+                                              <div class="head">
+                                                <select class="input_select">
+                                                    <option value="volvo" hidden>Select unit</option>
+                                                    <option value="volvo">Unit</option>
+                                                    <option value="saab">unit</option>                                       
+                                                </select>
+                                              </div>
+                                          </div>
+                                        </div>
+                                    
+                                        
+                                      <div class="row">
+                                        <div class="col-md-4 col-sm-4 col-4">
+                                            <div class="head special">
+                                               {{'HOME.Cadmium' | translate}}
+                                            </div>
+      
+                                          </div>
+                                          <div class="col-md-4 col-sm-4 col-4">
+                                              <div class="head">
+                                                  <input type="text" >
+                                              </div>
+                                          </div>
+                                          <div class="col-md-4 col-sm-4 col-4">
+                                              <div class="head">
+                                                <select class="input_select">
+                                                    <option value="volvo" hidden>Select unit</option>
+                                                    <option value="volvo">Unit</option>
+                                                    <option value="saab">unit</option>                                       
+                                                </select>
+                                              </div>
+                                          </div>
+                                        </div>
+      
+                                    <div class="row">
+                                      <div class="col-md-4 col-sm-4 col-4">
+                                          <div class="head special">
+                                             {{'HOME.Chromium' | translate}}
+                                          </div>
+      
+                                        </div>
+                                        <div class="col-md-4 col-sm-4 col-4">
+                                            <div class="head">
+                                                <input type="text" >
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-4 col-4">
+                                            <div class="head">
+                                              <select class="input_select">
+                                                  <option value="volvo" hidden>Select unit</option>
+                                                  <option value="volvo">Unit</option>
+                                                  <option value="saab">unit</option>                                       
+                                              </select>
+                                            </div>
+                                        </div>
+                                      </div>
+      
+                                    <div class="row">
+                                      <div class="col-md-4 col-sm-4 col-4">
+                                          <div class="head special">
+                                            {{'HOME.Copper' | translate}}
+      
+                                          </div>
+      
+                                        </div>
+                                        <div class="col-md-4 col-sm-4 col-4">
+                                            <div class="head">
+                                                <input type="text" >
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-4 col-4">
+                                            <div class="head">
+                                              <select class="input_select">
+                                                  <option value="volvo" hidden>Select unit</option>
+                                                  <option value="volvo">Unit</option>
+                                                  <option value="saab">unit</option>                                       
+                                              </select>
+                                            </div>
+                                        </div>
+                                      </div>
+                                      <div class="row">
+                                        <div class="col-md-4 col-sm-4 col-4">
+                                            <div class="head special">
+                                             {{'HOME.Iron' | translate}}
+                                            </div>
+      
+                                          </div>
+                                          <div class="col-md-4 col-sm-4 col-4">
+                                              <div class="head">
+                                                  <input type="text" >
+                                              </div>
+                                          </div>
+                                          <div class="col-md-4 col-sm-4 col-4">
+                                              <div class="head">
+                                                <select class="input_select">
+                                                    <option value="volvo" hidden>Select unit</option>
+                                                    <option value="volvo">Unit</option>
+                                                    <option value="saab">unit</option>                                       
+                                                </select>
+                                              </div>
+                                          </div>
+                                        </div>
+      
+                                    <div class="row">
+                                        <div class="col-md-4 col-sm-4 col-4">
+                                            <div class="head special">
+                                             {{'HOME.Lead' | translate}}
+                                            </div>
+      
+                                          </div>
+                                          <div class="col-md-4 col-sm-4 col-4">
+                                              <div class="head">
+                                                  <input type="text" >
+                                              </div>
+                                          </div>
+                                          <div class="col-md-4 col-sm-4 col-4">
+                                              <div class="head">
+                                                <select class="input_select">
+                                                    <option value="volvo" hidden>Select unit</option>
+                                                    <option value="volvo">Unit</option>
+                                                    <option value="saab">unit</option>                                       
+                                                </select>
+                                              </div>
+                                          </div>
+                                        </div>
+                                    <div class="row">
+                                        <div class="col-md-4 col-sm-4 col-4">
+                                            <div class="head special">
+                                              {{'HOME.Manganese' | translate}}
+                                            </div>
+      
+                                          </div>
+                                          <div class="col-md-4 col-sm-4 col-4">
+                                              <div class="head">
+                                                  <input type="text" >
+                                              </div>
+                                          </div>
+                                          <div class="col-md-4 col-sm-4 col-4">
+                                              <div class="head">
+                                                <select class="input_select">
+                                                    <option value="volvo" hidden>Select unit</option>
+                                                    <option value="volvo">Unit</option>
+                                                    <option value="saab">unit</option>                                       
+                                                </select>
+                                              </div>
+                                          </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4 col-sm-4 col-4">
+                                                <div class="head special">
+                                              {{'HOME.Nickel' | translate}}
+                                              
+                                                </div>
+      
+                                              </div>
+                                              <div class="col-md-4 col-sm-4 col-4">
+                                                  <div class="head">
+                                                      <input type="text" >
+                                                  </div>
+                                              </div>
+                                              <div class="col-md-4 col-sm-4 col-4">
+                                                  <div class="head">
+                                                    <select class="input_select">
+                                                        <option value="volvo" hidden>Select unit</option>
+                                                        <option value="volvo">Unit</option>
+                                                        <option value="saab">unit</option>                                       
+                                                    </select>
+                                                  </div>
+                                              </div>
+                                            </div>
+                                      <div class="row">
+                                          <div class="col-md-4 col-sm-4 col-4">
+                                              <div class="head special">
+                                              {{'HOME.Selenium' | translate}}
+                                              
+                                              </div>
+      
+                                            </div>
+                                            <div class="col-md-4 col-sm-4 col-4">
+                                                <div class="head">
+                                                    <input type="text" >
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-4 col-4">
+                                                <div class="head">
+                                                  <select class="input_select">
+                                                      <option value="volvo" hidden>Select unit</option>
+                                                      <option value="volvo">Unit</option>
+                                                      <option value="saab">unit</option>                                       
+                                                  </select>
+                                                </div>
+                                            </div>
+                                          </div>
+      
+                                      <div class="row">
+                                          <div class="col-md-4 col-sm-4 col-4">
+                                              <div class="head special">
+                                                 {{'HOME.Sodium' | translate}}
+                                              </div>
+      
+                                            </div>
+                                            <div class="col-md-4 col-sm-4 col-4">
+                                                <div class="head">
+                                                    <input type="text" >
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-4 col-4">
+                                                <div class="head">
+                                                  <select class="input_select">
+                                                      <option value="volvo" hidden>Select unit</option>
+                                                      <option value="volvo">Unit</option>
+                                                      <option value="saab">unit</option>                                       
+                                                  </select>
+                                                </div>
+                                            </div>
+                                          </div>
+      
+                                          <div class="row">
+                                              <div class="col-md-4 col-sm-4 col-4">
+                                                  <div class="head special">
+                                              {{'HOME.Zinc' | translate}}
+                                                  </div>
+                        
+                                                </div>
+                                                <div class="col-md-4 col-sm-4 col-4">
+                                                    <div class="head">
+                                                        <input type="text" >
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 col-sm-4 col-4">
+                                                    <div class="head">
+                                                      <select class="input_select">
+                                                          <option value="volvo" hidden>Select unit</option>
+                                                          <option value="volvo">Unit</option>
+                                                          <option value="saab">unit</option>                                       
+                                                      </select>
+                                                    </div>
+                                                </div>
+                                              </div>
+                                <!-- body -->
+                                  </mat-card>
+                                <!-- end general -->
+      
+                                
+                            <mat-card class="table input1">
+                                <div class="header text-center">
+                                <h3 class="title">  
+      
+                                {{'HOME.Perfluorinated_chemicals_(PFAS)' | translate}}
+      
+                                </h3>
+                                </div>
+      
+                                <!-- header -->
+                                <div class="row ">
+                                <div class="col-md-4 col-sm-4 col-4">
+                                <div class="head special1">{{'HOME.Particulars' | translate}}</div>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-4">
+                                <div class="head special1">{{'HOME.Value' | translate}} </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-4">
+                                <div class="head special1">{{'HOME.Unit' | translate}}</div>
+                                </div>
+                                </div>
+                                <!-- header -->
+                                <!-- body -->
+                                <div class="row">
+                                <div class="col-md-4 col-sm-4 col-4">
+                                <div class="head special">
+                                {{'HOME.PFOA' | translate}}
+      
+                                </div>
+      
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-4">
+                                <div class="head">
+                                <input type="text" >
+                                </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-4">
+                                <div class="head">
+                                <select class="input_select">
+                                <option value="volvo" hidden>Select unit</option>
+                                <option value="volvo">Unit</option>
+                                <option value="saab">unit</option>                                       
+                                </select>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="row">
+                                <div class="col-md-4 col-sm-4 col-4">
+                                <div class="head special">
+                                {{'HOME.PFOS' | translate}}
+                                </div>
+      
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-4">
+                                <div class="head">
+                                <input type="text" >
+                                </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-4">
+                                <div class="head">
+                                <select class="input_select">
+                                <option value="volvo" hidden>Select unit</option>
+                                <option value="volvo">Unit</option>
+                                <option value="saab">unit</option>                                       
+                                </select>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="row">
+                                <div class="col-md-4 col-sm-4 col-4">
+                                <div class="head special">
+                                {{'HOME.LSI' | translate}}
+                                </div>
+      
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-4">
+                                <div class="head">
+                                <input type="text" >
+                                </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-4">
+                                <div class="head">
+                                <select class="input_select">
+                                <option value="volvo" hidden>Select unit</option>
+                                <option value="volvo">Unit</option>
+                                <option value="saab">unit</option>                                       
+                                </select>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="row">
+                                <div class="col-md-4 col-sm-4 col-4">
+                                <div class="head special">
+                                {{'HOME.PFNA' | translate}}
+                                </div>
+      
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-4">
+                                <div class="head">
+                                <input type="text" >
+                                </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-4">
+                                <div class="head">
+                                <select class="input_select">
+                                <option value="volvo" hidden>Select unit</option>
+                                <option value="volvo">Unit</option>
+                                <option value="saab">unit</option>                                       
+                                </select>
+                                </div>
+                                </div>
+                                </div>
+      
+      
+                                
+                            </mat-card>
+      
+      
+                            <mat-card class="table input1">
+                            <div class="header text-center">
+                            <h3 class="title">  
+      
+                            {{'HOME.Other' | translate}}
+      
+                            </h3>
+                            </div>
+      
+                            <!-- header -->
+                            <div class="row ">
+                            <div class="col-md-4 col-sm-4 col-4">
+                            <div class="head special1">{{'HOME.Particulars' | translate}}</div>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-4">
+                            <div class="head special1">{{'HOME.Value' | translate}} </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-4">
+                            <div class="head special1">{{'HOME.Unit' | translate}}</div>
+                            </div>
+                            </div>
+                            <!-- header -->
+      
+                            <div class="row">
+                            <div class="col-md-4 col-sm-4 col-4">
+                            <div class="head special">
+                            {{'HOME.Ammonia' | translate}}
+                            </div>
+      
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-4">
+                            <div class="head">
+                            <input type="text" >
+                            </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-4">
+                            <div class="head">
+                            <select class="input_select">
+                            <option value="volvo" hidden>Select unit</option>
+                            <option value="volvo">Unit</option>
+                            <option value="saab">unit</option>                                       
+                            </select>
+                            </div>
+                            </div>
+                            </div>
+      
+                            <div class="row">
+                            <div class="col-md-4 col-sm-4 col-4">
+                            <div class="head special">
+                            {{'HOME.Perchlorate' | translate}}
+                            </div>
+      
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-4">
+                            <div class="head">
+                            <input type="text" >
+                            </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-4">
+                            <div class="head">
+                            <select class="input_select">
+                            <option value="volvo" hidden>Select unit</option>
+                            <option value="volvo">Unit</option>
+                            <option value="saab">unit</option>                                       
+                            </select>
+                            </div>
+                            </div>
+                            </div>
+      
+      
+                            <div class="row">
+                            <div class="col-md-4 col-sm-4 col-4">
+                            <div class="head special">
+                            {{'HOME.Polonium' | translate}}
+                            </div>
+      
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-4">
+                            <div class="head">
+                            <input type="text" >
+                            </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-4">
+                            <div class="head">
+                            <select class="input_select">
+                            <option value="volvo" hidden>Select unit</option>
+                            <option value="volvo">Unit</option>
+                            <option value="saab">unit</option>                                       
+                            </select>
+                            </div>
+                            </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 col-sm-4 col-4">
+                                <div class="head special">
+                                {{'HOME.Radium' | translate}}
+                                </div>
+      
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-4">
+                                <div class="head">
+                                <input type="text" >
+                                </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-4">
+                                <div class="head">
+                                <select class="input_select">
+                                <option value="volvo" hidden>Select unit</option>
+                                <option value="volvo">Unit</option>
+                                <option value="saab">unit</option>                                       
+                                </select>
+                                </div>
+                                </div>
+                            </div>
+      
+      
+                            <div class="row">
+                            <div class="col-md-4 col-sm-4 col-4">
+                            <div class="head special">
+                            {{'HOME.Silver' | translate}}
+                            </div>
+      
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-4">
+                            <div class="head">
+                            <input type="text" >
+                            </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-4">
+                            <div class="head">
+                            <select class="input_select">
+                            <option value="volvo" hidden>Select unit</option>
+                            <option value="volvo">Unit</option>
+                            <option value="saab">unit</option>                                       
+                            </select>
+                            </div>
+                            </div>
+                            </div>
+      
+                            <div class="row">
+                            <div class="col-md-4 col-sm-4 col-4">
+                            <div class="head special">
+                            {{'HOME.Sulfate' | translate}}
+                            </div>
+      
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-4">
+                            <div class="head">
+                            <input type="text" >
+                            </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-4">
+                            <div class="head">
+                            <select class="input_select">
+                            <option value="volvo" hidden>Select unit</option>
+                            <option value="volvo">Unit</option>
+                            <option value="saab">unit</option>                                       
+                            </select>
+                            </div>
+                            </div>
+                            </div>
+      
+                            <div class="row">
+                            <div class="col-md-4 col-sm-4 col-4">
+                            <div class="head special">
+                            {{'HOME.Uranium' | translate}}
+                            </div>
+      
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-4">
+                            <div class="head">
+                            <input type="text" >
+                            </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-4">
+                            <div class="head">
+                            <select class="input_select">
+                            <option value="volvo" hidden>Select unit</option>
+                            <option value="volvo">Unit</option>
+                            <option value="saab">unit</option>                                       
+                            </select>
+                            </div>
+                            </div>
+                            </div>
+      
+                            <!-- body -->
+                            </mat-card>
+                        </div>
+                        <!-- end left -->
+      
+      
+      
+                        <!-- start right -->
+                        <div class="col-md-6 right">
+                            <!-- start Pathogens-->
+                            <mat-card class="table input1">
+                            <div class="header text-center">
+                              <h3 class="title">  {{'HOME.Chlorine_bi-products' | translate}}</h3>
+                            </div>
+      
+                          <!-- header -->
+                          <div class="row ">
+                            <div class="col-md-4 col-sm-4 col-4">
+                              <div class="head special1">{{'HOME.Particulars' | translate}}</div>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-4">
+                              <div class="head special1">{{'HOME.Value' | translate}} </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-4">
+                              <div class="head special1">{{'HOME.Unit' | translate}}</div>
+                            </div>
+                          </div>
+                            <!-- header -->
+                            <!-- body -->
+      
+      
+                            <div class="row">
+                                <div class="col-md-4 col-sm-4 col-4">
+                                  <div class="head special">
+                                      {{'HOME.Dichloromethane' | translate}}
+                                  </div>
+      
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-4">
+                                    <div class="head">
+                                        <input type="text" >
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-4">
+                                    <div class="head">
+                                        <select class="input_select">
+                                            <option value="volvo" hidden>Select unit</option>
+                                            <option value="volvo">Unit</option>
+                                              <option value="saab">unit</option>    
+                                          
+                                          </select>
+                                    </div>
+                                </div>
+                              </div>
+      
+                              <div class="row">
+                                  <div class="col-md-4 col-sm-4 col-4">
+                                    <div class="head special">
+                                       {{'HOME.Total_Trichloroethylene' | translate}}
+                                    </div>
+      
+                                  </div>
+                                  <div class="col-md-4 col-sm-4 col-4">
+                                      <div class="head">
+                                          <input type="text" >
+                                      </div>
+                                  </div>
+                                  <div class="col-md-4 col-sm-4 col-4">
+                                      <div class="head">
+                                          <select class="input_select">
+                                              <option value="volvo" hidden>Select unit</option>
+                                              <option value="volvo">Unit</option>
+                                              <option value="saab">unit</option>                                       
+                                          </select>
+                                      </div>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4 col-sm-4 col-4">
+                                      <div class="head special">
+                                       {{'HOME.Trichloroethylene' | translate}}
+                                       
+                                      </div>
+      
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 col-4">
+                                        <div class="head">
+                                            <input type="text" >
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 col-4">
+                                        <div class="head">
+                                            <select class="input_select">
+                                                <option value="volvo" hidden>Select unit</option>
+                                                <option value="volvo">Unit</option>
+                                                <option value="saab">unit</option>                                       
+                                            </select>
+                                        </div>
+                                    </div>
+                                  </div>
+      
+                                  <div class="row">
+                                      <div class="col-md-4 col-sm-4 col-4">
+                                          <div class="head special">
+                                       {{'HOME.Tetrachloroethylene' | translate}}
+                                      
+                                          </div>
+      
+                                        </div>
+                                        <div class="col-md-4 col-sm-4 col-4">
+                                            <div class="head">
+                                                <input type="text" >
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-4 col-4">
+                                            <div class="head">
+                                              <select class="input_select">
+                                                  <option value="volvo" hidden>Select unit</option>
+                                                  <option value="volvo">Unit</option>
+                                                  <option value="saab">unit</option>                                       
+                                              </select>
+                                            </div>
+                                        </div>
+                                      </div>
+      
+                                      <div class="row">
+                                        <div class="col-md-4 col-sm-4 col-4">
+                                            <div class="head special">
+                                         {{'HOME.Total_Trihalomethanes' | translate}}
+                                        
+                                            </div>
+        
+                                          </div>
+                                          <div class="col-md-4 col-sm-4 col-4">
+                                              <div class="head">
+                                                  <input type="text" >
+                                              </div>
+                                          </div>
+                                          <div class="col-md-4 col-sm-4 col-4">
+                                              <div class="head">
+                                                <select class="input_select">
+                                                    <option value="volvo" hidden>Select unit</option>
+                                                    <option value="volvo">Unit</option>
+                                                    <option value="saab">unit</option>                                       
+                                                </select>
+                                              </div>
+                                          </div>
+                                        </div>
+                                      
+                            <!-- body -->
+                                </mat-card>
+                            <!-- end Pathogens -->
+      
+      
+      
+                              <!-- start chemical parameter -->
+                            <mat-card class="table input1">
+                                <div class="header text-center">
+                                  <h3 class="title">  
+                                    
+                                      {{'HOME.HAAs' | translate}}
+                                  
+                                  </h3>
+                                </div>
+      
+                              <!-- header -->
+                              <div class="row ">
+                                <div class="col-md-4 col-sm-4 col-4">
+                                  <div class="head special1">{{'HOME.Particulars' | translate}}</div>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-4">
+                                  <div class="head special1">{{'HOME.Value' | translate}} </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-4">
+                                  <div class="head special1">{{'HOME.Unit' | translate}}</div>
+                                </div>
+                              </div>
+                                <!-- header -->
+                                <!-- body -->
+                            
+      
+                                <div class="row">
+                                    <div class="col-md-4 col-sm-4 col-4">
+                                      <div class="head special">
+                                      {{'HOME.Total_haloacetic_acids' | translate}}
+                                      
+                                      </div>
+      
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 col-4">
+                                        <div class="head">
+                                            <input type="text" >
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 col-4">
+                                        <div class="head">
+                                            <select class="input_select">
+                                                <option value="volvo" hidden>Select unit</option>
+                                                <option value="volvo">Unit</option>
+                                                  <option value="saab">unit</option>    
+                                              
+                                              </select>
+                                        </div>
+                                    </div>
+                                  </div>
+      
+                                </mat-card>
+                                <!-- end Pathogens -->
+          
+                            <!-- start chemical parameter -->
+                            <mat-card class="table input1">
+                            <div class="header text-center">
+                            <h3 class="title">  
+      
+                            {{'HOME.Pesticides' | translate}}
+      
+                            </h3>
+                            </div>
+      
+                            <!-- header -->
+                            <div class="row ">
+                            <div class="col-md-4 col-sm-4 col-4">
+                            <div class="head special1">{{'HOME.Particulars' | translate}}</div>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-4">
+                            <div class="head special1">{{'HOME.Value' | translate}} </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-4">
+                            <div class="head special1">{{'HOME.Unit' | translate}}</div>
+                            </div>
+                            </div>
+                            <div class="row">
+                            <div class="col-md-4 col-sm-4 col-4">
+                            <div class="head special">
+                            {{'HOME.Chlordane' | translate}}
+      
+                            </div>
+      
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-4">
+                            <div class="head">
+                            <input type="text" >
+                            </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-4">
+                            <div class="head">
+                            <select class="input_select">
+                                <option value="volvo" hidden>Select unit</option>
+                                <option value="volvo">Unit</option>
+                                <option value="saab">unit</option>                                       
+                            </select>
+                            </div>
+                            </div>
+                            </div>
+                            <div class="row">
+                            <div class="col-md-4 col-sm-4 col-4">
+                            <div class="head special">
+                            {{'HOME.Heptachlor' | translate}}
+                            </div>
+      
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-4">
+                            <div class="head">
+                            <input type="text" >
+                            </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-4">
+                            <div class="head">
+                            <select class="input_select">
+                                <option value="volvo" hidden>Select unit</option>
+                                <option value="volvo">Unit</option>
+                                <option value="saab">unit</option>                                       
+                            </select>
+                            </div>
+                            </div>
+                            </div>
+      
+                            <div class="row">
+                            <div class="col-md-4 col-sm-4 col-4">
+                            <div class="head special">
+                              {{'HOME.Lindane' | translate}}
+                            </div>
+      
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-4">
+                            <div class="head">
+                              <input type="text" >
+                            </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-4">
+                            <div class="head">
+                              <select class="input_select">
+                                  <option value="volvo" hidden>Select unit</option>
+                                  <option value="volvo">Unit</option>
+                                  <option value="saab">unit</option>                                       
+                              </select>
+                            </div>
+                            </div>
+                            </div>
+      
+      
+                            <div class="row">
+                            <div class="col-md-4 col-sm-4 col-4">
+                            <div class="head special">
+                              {{'HOME.Total_pesticides' | translate}}
+                              
+                            </div>
+      
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-4">
+                            <div class="head">
+                              <input type="text" >
+                            </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-4">
+                            <div class="head">
+                              <select class="input_select">
+                                  <option value="volvo" hidden>Select unit</option>
+                                  <option value="volvo">Unit</option>
+                                  <option value="saab">unit</option>                                       
+                              </select>
+                            </div>
+                            </div>
+                            </div>
+                            <!-- end chemical parameter -->
+      
+                            </mat-card>
+      
+      
+      
+      
+      
+                          <mat-card class="table input1">
+                          <div class="header text-center">
+                          <h3 class="title">  
+      
+                          {{'HOME.Herbicides' | translate}}
+      
+                          </h3>
+                          </div>
+      
+                          <!-- header -->
+                          <div class="row ">
+                          <div class="col-md-4 col-sm-4 col-4">
+                          <div class="head special1">{{'HOME.Particulars' | translate}}</div>
+                          </div>
+                          <div class="col-md-4 col-sm-4 col-4">
+                          <div class="head special1">{{'HOME.Value' | translate}} </div>
+                          </div>
+                          <div class="col-md-4 col-sm-4 col-4">
+                          <div class="head special1">{{'HOME.Unit' | translate}}</div>
+                          </div>
+                          </div>
+                          <!-- header -->
+                          <!-- body -->
+      
+                          <div class="row">
+                          <div class="col-md-4 col-sm-4 col-4">
+                          <div class="head special">
+                          {{'HOME.2,4-D' | translate}}
+                          </div>
+      
+                          </div>
+                          <div class="col-md-4 col-sm-4 col-4">
+                          <div class="head">
+                          <input type="text" >
+                          </div>
+                          </div>
+                          <div class="col-md-4 col-sm-4 col-4">
+                          <div class="head">
+                          <select class="input_select">
+                          <option value="volvo" hidden>Select unit</option>
+                          <option value="volvo">Unit</option>
+                          <option value="saab">unit</option>                                       
+                          </select>
+                          </div>
+                          </div>
+                          </div>
+      
+                          <div class="row">
+                          <div class="col-md-4 col-sm-4 col-4">
+                          <div class="head special">
+                          {{'HOME.Atrazine' | translate}}
+      
+                          </div>
+      
+                          </div>
+                          <div class="col-md-4 col-sm-4 col-4">
+                          <div class="head">
+                          <input type="text" >
+                          </div>
+                          </div>
+                          <div class="col-md-4 col-sm-4 col-4">
+                          <div class="head">
+                          <select class="input_select">
+                          <option value="volvo" hidden>Select unit</option>
+                          <option value="volvo">Unit</option>
+                          <option value="saab">unit</option>                                       
+                          </select>
+                          </div>
+                          </div>
+                          </div>
+                          <div class="row">
+                          <div class="col-md-4 col-sm-4 col-4">
+                          <div class="head special">
+                          {{'HOME.Total_Herbicides' | translate}}
+      
+                          </div>
+      
+                          </div>
+                          <div class="col-md-4 col-sm-4 col-4">
+                          <div class="head">
+                          <input type="text" >
+                          </div>
+                          </div>
+                          <div class="col-md-4 col-sm-4 col-4">
+                          <div class="head">
+                          <select class="input_select">
+                          <option value="volvo" hidden>Select unit</option>
+                          <option value="volvo">Unit</option>
+                          <option value="saab">unit</option>                                       
+                          </select>
+                          </div>
+                          </div>
+                          </div>
+      
+                          </mat-card>
+      
+      
+                          <mat-card class="table input1">
+                          <div class="header text-center">
+                          <h3 class="title">  
+      
+                          {{'HOME.Pharmaceuticals' | translate}}
+      
+                          </h3>
+                          </div>
+      
+                          <!-- header -->
+                          <div class="row ">
+                          <div class="col-md-4 col-sm-4 col-4">
+                          <div class="head special1">{{'HOME.Particulars' | translate}}</div>
+                          </div>
+                          <div class="col-md-4 col-sm-4 col-4">
+                          <div class="head special1">{{'HOME.Value' | translate}} </div>
+                          </div>
+                          <div class="col-md-4 col-sm-4 col-4">
+                          <div class="head special1">{{'HOME.Unit' | translate}}</div>
+                          </div>
+                          </div>
+                          <!-- header -->
+      
+                          <div class="row">
+                          <div class="col-md-4 col-sm-4 col-4">
+                          <div class="head special">
+                          {{'HOME.Atenolol' | translate}}
+                          </div>
+      
+                          </div>
+                          <div class="col-md-4 col-sm-4 col-4">
+                          <div class="head">
+                          <input type="text" >
+                          </div>
+                          </div>
+                          <div class="col-md-4 col-sm-4 col-4">
+                          <div class="head">
+                          <select class="input_select">
+                          <option value="volvo" hidden>Select unit</option>
+                          <option value="volvo">Unit</option>
+                          <option value="saab">unit</option>                                       
+                          </select>
+                          </div>
+                          </div>
+                          </div>
+      
+                          <div class="row">
+                          <div class="col-md-4 col-sm-4 col-4">
+                          <div class="head special">
+                          {{'HOME.Carbamazepine' | translate}}
+                          </div>
+      
+                          </div>
+                          <div class="col-md-4 col-sm-4 col-4">
+                          <div class="head">
+                          <input type="text" >
+                          </div>
+                          </div>
+                          <div class="col-md-4 col-sm-4 col-4">
+                          <div class="head">
+                          <select class="input_select">
+                          <option value="volvo" hidden>Select unit</option>
+                          <option value="volvo">Unit</option>
+                          <option value="saab">unit</option>                                       
+                          </select>
+                          </div>
+                          </div>
+                          </div>
+      
+      
+                          <div class="row">
+                          <div class="col-md-4 col-sm-4 col-4">
+                          <div class="head special">
+                          {{'HOME.Estrone' | translate}}
+                          </div>
+      
+                          </div>
+                          <div class="col-md-4 col-sm-4 col-4">
+                          <div class="head">
+                          <input type="text" >
+                          </div>
+                          </div>
+                          <div class="col-md-4 col-sm-4 col-4">
+                          <div class="head">
+                          <select class="input_select">
+                          <option value="volvo" hidden>Select unit</option>
+                          <option value="volvo">Unit</option>
+                          <option value="saab">unit</option>                                       
+                          </select>
+                          </div>
+                          </div>
+                          </div>
+      
+                        <div class="row">
+                        <div class="col-md-4 col-sm-4 col-4">
+                        <div class="head special">
+                        {{'HOME.Meprobamat' | translate}}
+                        </div>
+      
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-4">
+                        <div class="head">
+                        <input type="text" >
+                        </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-4">
+                        <div class="head">
+                        <select class="input_select">
+                        <option value="volvo" hidden>Select unit</option>
+                        <option value="volvo">Unit</option>
+                        <option value="saab">unit</option>                                       
+                        </select>
+                        </div>
+                        </div>
+                        </div>
+      
+      
+                        <div class="row">
+                        <div class="col-md-4 col-sm-4 col-4">
+                        <div class="head special">
+                        {{'HOME.Trimethoprim' | translate}}
+                        </div>
+      
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-4">
+                        <div class="head">
+                        <input type="text" >
+                        </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-4">
+                        <div class="head">
+                        <select class="input_select">
+                        <option value="volvo" hidden>Select unit</option>
+                        <option value="volvo">Unit</option>
+                        <option value="saab">unit</option>                                       
+                        </select>
+                        </div>
+                        </div>
+                        </div>
+                          <!-- body -->
+                          </mat-card>
+      
+                            
+                          </div>
+                       
+                        <!-- end right -->
+                        <br>
+                        <br>
+                        <br>
+                       
+      
+                      
+                      </div>
+      
+      
+                   
+                      
+                    <!-- </div> -->
+                 
+        
+        
+                  </div>
+                </div>
+              </div>
+              <!--[total payment end]-->
+              
+            </div>
+          </div>
+      </body>
+      

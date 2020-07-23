@@ -1,0 +1,249 @@
+
+<head>
+    <style>
+
+        </style>
+</head>
+<body>
+  
+    <div class="panel-header">
+        <div class="header text-center">
+          <h2 class="title">
+            <!-- Add Report -->
+            {{ 'HOME.Add_report' | translate }}
+          </h2>
+        
+        
+        </div>
+      </div>
+      <div class="">
+        <div class="row">
+          <!--[total payment]-->
+          <div class="col-md-12">
+            <div class="card">
+               
+              <div class="card-body">
+                <!--[content]-->
+    
+                <!--[table]-->
+              
+                <div class="row">
+                
+                    <div class="col-md-6">
+                        <div class="header text-center">
+                            <h3 class="title">  {{ 'HOME.subheading' | translate }}</h3>
+                          </div>
+                    </div>
+                    <div class="col-md-5"></div>
+               
+                    <div class="col-md-12">
+                      <mat-card>
+                          <form >  
+                              <div > 
+                                <div class="row">
+                                  <div class="col-md-4">
+                                    <mat-form-field>
+                                      <mat-select placeholder="Country" [(ngModel)]='data.country'  [ngModelOptions]="{standalone: true}"(selectionChange)="change($event.value)">
+                                        <mat-option *ngFor="let option of countriesOptions" [value]="option">{{option}}</mat-option>
+                                      </mat-select>
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <mat-form-field>
+                                      <input matInput placeholder="Province"[ngModelOptions]="{standalone: true}"  [(ngModel)]="data.province">
+                                    </mat-form-field>
+
+                                  </div>
+                                  <div class="col-md-4">                                    
+                                    <mat-form-field>
+                                      <input matInput placeholder="Zone" [ngModelOptions]="{standalone: true}" [(ngModel)]="data.area">
+                                    </mat-form-field>
+                                  </div>
+                                </div>
+                                <div class="row style_change" *ngFor="let City of Cities; let i = index;">
+
+                                  <div class="col-md-1">
+                                    
+                                    <button *ngIf="i!=(Cities.length-1)" type="button" class="btn btn-danger btn-sm" (click)="remove_city(i)">City {{i+1}} Remove 
+                                    </button>
+                                    <button *ngIf="i==(Cities.length-1)" mat-button (click)="addCities()"><abbr title="Add city">
+                                      
+                                      <!-- <i class="fa fa-plus-circle" aria-hidden="true"></i> -->
+                                      <img src='./assets/image11.png'>
+                                    </abbr></button>
+                                  </div>
+                                  <div class="col-md-3">
+                                    <mat-form-field>
+                                      <input matInput placeholder="City {{i+1}}"  [(ngModel)]='City.city'   name="City_{{i}}">
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-2">
+                                    <mat-form-field>
+
+                                      <input matInput placeholder="Start post code" name="post_form_{{i}}" [ngModelOptions]="{standalone: true}" [(ngModel)]='City.post_from'>
+
+                                    </mat-form-field>
+
+                                  </div>
+                                  <div class="col-md-2">
+                                    <mat-form-field>
+                                      <input matInput placeholder="End post code" name="post_to_{{i}}" [ngModelOptions]="{standalone: true}" [(ngModel)]='City.post_to'>
+                                    </mat-form-field>
+
+                                  </div>
+                                  <div class="col-md-4 col-xs-12 col-sm-4" *ngFor="let address of Cities[i].random_post_code; let j = index;">     
+                                    
+                                    <div class="row">
+                                      <div class="col-md-8">
+                                        <mat-form-field>
+                                          <input matInput placeholder="Post code {{j + 1}}" [(ngModel)]="address.Post_code_random" name="address_{{j}}">
+                                        </mat-form-field>
+                                      </div>
+                                      <div class="col-md-4">
+                                        <button *ngIf="j!=(Cities[i].random_post_code.length-1)" type="button" class="btn btn-danger btn-sm" (click)="removeAddress(i,j)"><i class="fa fa-times" aria-hidden="true"></i>
+                                        </button>
+
+                                        <!-- {{j}} -->
+                                        <button *ngIf="j==(Cities[i].random_post_code.length-1)" mat-button (click)="addAddress(i)"><abbr title="Add Post code">
+                                      
+                                          <i class="fa fa-plus-circle" aria-hidden="true" style="color:red"></i>
+                                          <img src='./assets/post.jfif' style="width:35px;">
+                                        </abbr></button>
+                                      </div>
+
+                                    </div>
+
+                            
+                                   </div>
+                                 
+                                </div>
+                             <div class="row">
+                                  <div class="col-md-4">                                    
+                                    <mat-form-field>
+                                      <input matInput placeholder="Utlity" [ngModelOptions]="{standalone: true}" [(ngModel)]="data.utlity_enter">
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <mat-form-field>
+                                      <mat-select placeholder="Drinkable(Y/N)" (selectionChange)="data.drinkable=$event.value">
+                                        <mat-option value="Yes">Yes</mat-option>
+                                        <mat-option value="No">No</mat-option>
+                                        <mat-option value="Under Review">Under Review</mat-option>
+                                      </mat-select>
+                                    </mat-form-field>
+                                  </div>
+                                  
+                                </div>
+
+
+                                <div class="row">
+                                  <div class="col-md-2">
+                                    <mat-checkbox  (change)="data.averageDataRange=$event.checked">Average data range</mat-checkbox>
+                                  </div>
+                                  <div class="col-md-2" *ngIf = "!data.averageDataRange">                                    
+                                    <mat-form-field >
+                                      <input matInput [matDatepicker]="picker1" placeholder="Date of report"  [ngModelOptions]="{standalone: true}" [(ngModel)]='data.reported_date'>
+                                      <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                                      <mat-datepicker #picker1></mat-datepicker>
+                                    </mat-form-field>                                   
+                                  </div>
+
+                                  <div class="col-md-2" *ngIf = "data.averageDataRange">
+                                    <mat-form-field *ngIf = "data.averageDataRange">
+                                      <input matInput [matDatepicker]="picker1" placeholder="Start date" [ngModelOptions]="{standalone: true}" [(ngModel)]="data.start_date">
+                                      <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                                      <mat-datepicker #picker1></mat-datepicker>
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-4" *ngIf = "data.averageDataRange">
+                                    <mat-form-field>
+                                        <input matInput [matDatepicker]="picker2" [ngModelOptions]="{standalone: true}" placeholder="End date" [(ngModel)]="data.end_date">
+                                        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                                        <mat-datepicker #picker2></mat-datepicker>
+                                      </mat-form-field>
+                                      
+                                    <!-- </mat-form-field> -->
+                                  </div>
+
+                                  <div class="col-md-4">
+                                    <mat-form-field>
+                                        <input matInput [matDatepicker]="picker" placeholder="Date submitted"   [ngModelOptions]="{standalone: true}" [(ngModel)]='data.submitted_date'>
+                                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                        <mat-datepicker #picker></mat-datepicker>
+                                      </mat-form-field>
+                                      
+                                    <!-- </mat-form-field> -->
+                                  </div>
+                                  
+                                </div>
+                                <div class="row"> 
+                                  <div class="col-md-8">                                    
+                                    <mat-form-field>
+                                      <input matInput placeholder="Blog link (EN)"   [ngModelOptions]="{standalone: true}" [(ngModel)]="data.blog_english">
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-8">                                    
+                                    <mat-form-field>
+                                      <input matInput placeholder="Blog link (Local language)"  [ngModelOptions]="{standalone: true}" [(ngModel)]="data.blog_local">
+                                    </mat-form-field>
+                                  </div>
+                                </div>
+          
+                                
+
+                                
+                                
+
+                
+                                <div class="row">
+                                  <div class="col-md-9"></div>
+                                  <!-- <div class="col-md-2">
+                                      <br>
+                                      <br>
+                                      <br>
+                                    <div class="form-group">
+                                     
+                                        <div >
+                                          <span  class="color_text">
+                                            <input class="div_1" (click)="save()" type="submit" [value]="'HOME.save' | translate" style="background: #77d7d7;
+                                            color: white;
+                                            font-weight: 800;
+                                            font-size: large;">
+                                          </span>
+                                        </div>
+                                    </div>
+                                  </div> -->
+                                    <div class="col-md-3">
+                                      <br>
+                                      <br>
+                                      <br>
+                                    <div class="form-group">
+                                     
+                                        <div >
+                                          <span  class="color_text">
+                                            <input class="div_1" (click)="next()" type="submit" [value]="'HOME.Next' | translate" style="    background: #87aeae;
+                                            color: white;
+                                            font-weight: 800;
+                                            font-size: large;">
+                                          </span>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                           </div>
+                          </form>
+                      </mat-card>
+                     
+                    </div>
+                </div>
+             
+    
+    
+              </div>
+            </div>
+          </div>
+          <!--[total payment end]-->
+          
+        </div>
+      </div>
+</body>

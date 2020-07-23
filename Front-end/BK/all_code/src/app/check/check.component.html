@@ -1,0 +1,159 @@
+<!-- <app-topbar></app-topbar> -->
+<div class="app-topbar">
+   
+      <mat-toolbar>        
+            <div class="left"><img src="/../../assets/logo-wbg.svg"></div>      
+      </mat-toolbar>
+    </div>
+<div class="container-fluid imagefull_mobile">
+
+
+    <div class="row  show112" style="text-align: left;">
+        <div class="col-md-12 col-xs-12">
+           
+      <button type="submit" class="back_button_arraow" (click)="check()" ><img src="../../assets/arrowLeft.png"></button>
+        </div>
+       </div>
+   <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 col-xs-12">
+                <div class="row" style="text-align: left;">                
+                    <div class="col-md-12 col-xs-12">
+                        <div class="set">
+                        <h3 class="style">
+                        <!-- Water <br class="show112">Summary -->
+                        {{ 'Report.heading2' | translate }}
+                        </h3>
+                        <h2 class="show111">
+                            
+                                {{data.utlity_enter}}, {{data.city}}, {{data.country}} - {{data.postcode}}
+                        
+                        </h2>
+
+                        <h4 class="subheading">
+                            {{ 'Report.subheading2' | translate }}
+                      
+                        </h4> 
+                        </div>
+                    </div>
+                </div>
+                <!-- start water safety -->
+                <div class="border_table " id="border_table">
+
+
+
+                          <div class="row col-class" *ngFor="let table of tables; let i = index">    
+                          <div class="col-md-3 align_center">
+                                              
+                              <div class="headings_box">
+                              <h3>
+                                  {{'Report.'+table.table |translate}}
+                              </h3>
+                              </div>
+                          </div>          
+                          <div class="col-md-9 col-xs-12 align_center">                                                            
+                              <table mat-table [dataSource]="table.data" class="mat-elevation-z8" id="table">            
+
+                              <!-- Substance Column -->
+                              <ng-container matColumnDef="Substance" class="head_css">
+                              <th mat-header-cell *matHeaderCellDef class="head_css"> {{ 'Report.Substance' | translate }} </th>
+                              <td mat-cell *matCellDef="let element" class="header_title" >                 
+                                <!-- (click)="openConfirmationDialog(element.Substance)" -->
+                                <!-- {{element.Substance}}  -->
+
+                                {{'Report.'+element.Substance |translate}}
+                              </td>
+                              </ng-container>
+
+                              <ng-container matColumnDef="unit">
+                                <th mat-header-cell *matHeaderCellDef> Unit </th>
+                                <td mat-cell *matCellDef="let element" class="header_title"> 
+                
+                                  {{ element.Unit==undefined||element.Unit==''?('Report.Not reported' |translate ):element.Unit}} </td>
+                                </ng-container>
+
+                              <!-- Name Column -->
+                              <ng-container matColumnDef="Before">
+                              <th mat-header-cell *matHeaderCellDef>{{ 'Report.Before' | translate }}</th>
+                              <td mat-cell *matCellDef="let element">
+
+
+                                  {{element.Zone==undefined ||element.Zone== "NaN"?('Report.Not reported' |translate ):element.Zone}}
+
+                                  
+                              
+
+                              </td>
+                              </ng-container>
+
+                              <!-- Limit_range Column -->
+                              <ng-container matColumnDef="Limit_range" >
+                              <th mat-header-cell *matHeaderCellDef > {{ 'Report.Limit_range' | translate }}    </th>
+                              <td mat-cell *matCellDef="let element"  > 
+                                
+                                
+                                  <!-- {{element.Max==undefined ||element.Max== "NaN" ||element.Max==''?'None':element.Max}}-->
+                                  
+
+                                  
+                                  {{
+                                    (element.Recommended =='' || element.Recommended == undefined)&& (element.Max=='' || element.Max == undefined)?('Report.Not reported' |translate ):
+                                
+                                (
+                                    element.Recommended !=''&& element.Max!=''?
+                                    (
+                                      element.Unit==''||element.Unit==undefined?element.Recommended +' - '+element.Max:element.Recommended +' - '+element.Max 
+                                    ):
+
+                                    (
+                                        element.Recommended =='' && element.Max!=''?
+                                        element.Max                               
+                                        
+                                        :
+                                        element.Recommended
+                                        
+
+                                    )
+                                    
+                                  
+                                )
+                                
+                                
+                            }}
+
+
+                              </td>
+                              </ng-container>
+
+                              <!-- Report Column -->
+                              <ng-container matColumnDef="After">
+                              <th mat-header-cell *matHeaderCellDef> {{ 'Report.After' | translate }} </th>
+                              <td mat-cell *matCellDef="let element">
+
+                                  {{element.Filtering==undefined ||element.Filtering== "NaN" ||element.Filtering==''?('Report.Not reported' |translate ):element.Filtering}}
+
+                                  </td>
+                              </ng-container>
+
+                              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                              <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                              </table>            
+
+                          </div>
+
+                          </div>
+
+
+
+                <!-- </div> -->
+
+                <!-- end water safety -->
+                </div>
+                <div class="col-md-2"></div>
+                <div class="row  show111" style="text-align: center;">
+                    <div class="col-md-12">
+                          <button class="button_reset" type="submit" (click)="check()" > {{ 'Report.Go_back' | translate }}</button>
+                    </div>
+                </div>
+   </div>
+</div>

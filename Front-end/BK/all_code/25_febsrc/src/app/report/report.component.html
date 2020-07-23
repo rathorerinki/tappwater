@@ -1,0 +1,240 @@
+
+<!-- <app-topbar></app-topbar> -->
+<div class="app-topbar">      
+      <mat-toolbar>        
+            <div class="left"><img src="/../../assets/logo-wbg.svg"></div>      
+      </mat-toolbar>
+    </div>
+<div class="container-fluid imagefull_mobile">
+
+    <div class="row margin_top">
+        <div class="col-md-12">
+            <div class="container-fluid ">
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6 col-xs-12">
+                        <h1>
+                            <span class="show111">{{ 'Report.mobheading1' | translate }} <br>{{ 'Report.mobheading2' | translate }}</span> 
+                            <span class="show112">{{ 'Report.heading' | translate }} </span> 
+
+                        </h1>
+                        <h2>
+                            {{data.utlity_enter}}, {{data.city}}, {{data.country}} - {{data.postcode}}
+                        </h2>
+            
+                    </div>
+                    <div class="col-md-3 "></div>
+                </div>
+                </div>      
+
+                <div class="row inside image" style="text-align: center;">
+                
+                    <div class="col-md-12  col-xs-12">   
+                        <p class="para show112">
+                            <!-- Your water -->
+                            
+                            {{ 'Report.subheading' | translate }}
+                        </p>              
+                         <div class="row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8  col-xs-12">
+                                <div class="row">
+                                    <div class="col-md-4  col-xs-12">
+                                        <p class="name show112"> {{ 'Report.safety' | translate }}*</p>                              
+
+                                       <!-- //desktop -->
+                                        <div class="background show112">
+                                            <img *ngIf='data.drinkable=="Yes"' src="../../assets/quality@3x.png" width="100%" >
+
+                                            <img *ngIf='data.drinkable=="No"' src="../../assets/icon_drin_don't safe.png" width="100%" >
+                                            <P *ngIf='data.drinkable=="Under Review"'>Under Review</P>
+                                        </div>
+
+                                        <div class="show111">
+                                             <p class="name show111"  *ngIf='data.drinkable=="Yes"'> {{ 'Report.Status' | translate }}
+                                                 
+                                                <span *ngIf='data.drinkable=="Yes"'>* </span></p>
+                                             <div class="background safe">
+                                                <img src="../../assets/group.png"  *ngIf='data.drinkable=="Yes"' >                                                
+                                                <img src="../../assets/dontgroup.png"*ngIf='data.drinkable=="No"'>
+                                                <P *ngIf='data.drinkable=="Under Review"'>
+                                                    {{ 'Report.Under_Review' | translate }}
+                                                    </P>
+                                                <p>
+                                                    <!-- {{ 'Report.Under_Review_heading' | translate }} -->
+                                                    *{{data.description}}
+                                                    </p>
+                                            </div>
+
+
+
+                                        </div>
+
+                                       
+                                    </div>
+                                    <!-- //mobile -->
+                                    <div class="row show111" style="text-align: center;">
+                                        <div class="col-md-12 col-xs-12">
+                                           <p class="view">  <a class="changes_view">                                               
+                                            {{ 'Report.view_more_details' | translate }}
+                                            </a></p>
+                                        </div>
+                                       </div>
+                                    <!-- //mobile -->
+                                    <div class="col-md-4  col-xs-6 ">
+                                        <p class="name name1"> {{ 'Report.Taste' | translate }}</p>
+                                        <div class="background background_change1">
+                                            <!-- bad -->
+                                        <img *ngIf='((Chlorine > 0.5 && Hardness > 200)) || ((Chlorine > 0.5 && Hardness < 100)) ' src="../../assets/taste.png" width="100%" >
+                                       
+                                       <!-- ok -->
+
+                                       
+                                        <img *ngIf='((0.4 < Chlorine) && (Chlorine  < 0.6)) && ((100 < Hardness) && (Hardness< 200))' src="../../assets/icon_taste_ok.png" width="100%" >
+                                       
+                                        <!-- good -->
+                                        <img *ngIf='0.4 > Chlorine && Hardness < 100' src="../../assets/icon_taste_good.png" width="100%" >
+                                         
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4  col-xs-6">
+                                        <p class="name name2"> limescale</p>
+                                        <div class="background background_change2">
+
+                                        <!-- very high -->
+                                        <img *ngIf='Hardness > 250' src="../../assets/icon_limescale_very high level.png" width="100%"  >
+                                            <!-- high -->
+                                            
+                                        <img *ngIf='Hardness > 200 && Hardness <= 250' src="../../assets/icon_limescale_high level.png" width="100%"  >
+                                        
+                                        <!-- medium -->
+                                        <img *ngIf='Hardness > 100 && Hardness <= 200' src="../../assets/icon_limescale_medium level.png" width="100%"  >
+
+                                        <img *ngIf='Hardness <= 100' src="../../assets/limescale@2x.png" width="100%"  >
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                      
+                    </div>
+                   
+                    </div>
+                    <div class="col-md-12  col-xs-12 margin_bottom show112">
+                        <span class="paragraph">
+
+                            *{{data.description}}
+                        </span>
+                    </div>
+                </div>  
+        </div>
+        
+   </div>
+
+
+
+   <!-- desktop -->
+   <div class="row show112" style="text-align: center;">
+    <div class="col-md-12  col-xs-12">        
+       <p class="view ">  <a > {{ 'Report.view' | translate }}</a></p>
+    </div>
+   </div>
+
+   <div class="row ">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+                <div class="row " style="text-align: center;">                
+                        <div class="col-md-12 show112">
+                        <h3 class="style">
+                            <!-- Water Summary -->
+                            {{ 'Report.heading2' | translate }}
+                        </h3>
+                        <h4 class="subheading">
+                            {{ 'Report.subheading2' | translate }}
+                        </h4>           
+
+                        </div>
+
+                <!-- No information available for this postcode yet -->
+                <div class="row important" >                
+                    <div class="col-md-12" >
+                        <table mat-table [dataSource]="hold_array.data" class="mat-elevation-z8">
+                        <ng-container matColumnDef="Substance" >
+                        <th mat-header-cell *matHeaderCellDef> {{ 'Report.Substance' | translate }} </th>
+                        <td mat-cell *matCellDef="let element" class="header_title" (click)="openConfirmationDialog(element.Substance)">                             
+                            {{'Report.'+element.Substance |translate}} {{(element.Unit==undefined||element.Unit=='')?' ':' ('+element.Unit+')'}}            
+                        </td>
+                        </ng-container>
+                        <ng-container matColumnDef="Before">
+                        <th mat-header-cell *matHeaderCellDef>{{ 'Report.Before_change' | translate }}  </th>
+                        <td mat-cell *matCellDef="let element">
+                            {{
+                                element.Before==undefined||element.Before== NaN ||element.Before==''|| element.Before==null?                               
+                                ('Report.Not reported' |translate)                 
+                             
+                                :(element.Before=="Unknown" || element.Before=="Low" || element.Before=="Medium" || element.Before=="High" ||element.Before=="None reported" ||element.Before=="Below limit")?
+                                
+                                ('Report.'+element.Before |translate):element.Before
+                            }}
+
+                        </td>
+                        </ng-container>
+
+                       
+                        <ng-container matColumnDef="Limit_range" >
+                        <th mat-header-cell *matHeaderCellDef > {{ 'Report.note' | translate }} </th>
+                        <td mat-cell *matCellDef="let element"> 
+                        {{element.note=='' ||element.note== undefined? ('Report.Not reported' |translate):('Report.'+element.note |translate)}}
+
+                        </td>
+                        </ng-container>
+
+                       
+                        <ng-container matColumnDef="After">
+                        <th mat-header-cell *matHeaderCellDef>{{ 'Report.After_change' | translate }}  </th>
+                        <td mat-cell *matCellDef="let element"> 
+
+                            {{
+                                element.After==undefined||element.After== "NaN" ||element.After==''|| element.After==null?('Report.Not reported' |translate):(element.After=="Unknown" || element.After=="Low" || element.After=="Medium" || element.After=="High" ||element.After=="None reported" ||element.After=="Below limit")?
+                                
+                                ('Report.'+element.After |translate):element.After
+                            }}
+
+                            <!-- ('Report.'+element.After |translate) -->
+                        </td>
+                        </ng-container>
+                        <div *ngIf="!table_hide">
+                            <h3>No information available for this postcode yet</h3>
+                           </div>
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                        </table>
+                        <div *ngIf="table_hide" style="border-top: 1px solid #80808026;border-bottom: 1px solid #80808026;">
+                            <br>
+                           
+                            <br>
+                            <h4>No information available for this postcode yet</h4>                           
+                            <br>
+                            <br>
+                        </div>
+                 </div>
+
+              
+                </div>
+        </div>
+        <div class="col-md-2"></div>
+        <div class="row  " style="text-align: center;">
+            <div class="col-md-12">
+               <p class="view" (click)="check()">  <a> {{ 'Report.all' | translate }} </a></p>
+
+               
+          <button class="button_reset" type="submit"  >              
+            {{ 'Report.footer' | translate }} 
+            </button>
+            <br>
+            <br>
+            </div>
+           </div>
+
+
+   </div>
+</div>

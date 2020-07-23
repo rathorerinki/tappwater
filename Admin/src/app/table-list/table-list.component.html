@@ -1,0 +1,101 @@
+<div class="panel-header panel-header-sm ne">
+ <div class="search">
+</div>
+</div>
+
+
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title"> {{ 'HOME.View_report' | translate }}</h4>
+        </div>
+         <div class="card-body">
+                          <div class="row">
+                              <div class="col-md-8">
+                                  <mat-form-field>
+                                    <i class="fa fa-search" aria-hidden="true" style="float:right"></i> <input matInput (keyup)="applyFilter($event.target.value)" [placeholder]="'HOME.Search' | translate">
+                                  </mat-form-field>
+                                </div>
+                                <div class="col-md-4">
+                                  <button mat-raised-button type="submit" class="btn " style="background:blue;color:white;" (click)="add()">{{ 'HOME.Add_report' | translate }}</button> 
+                                  &nbsp;|&nbsp;
+                                  <button mat-raised-button type="submit" class="btn " style="background:green;color:white;" (click)="export(1)">  Export  </button> 
+                                </div>
+                          </div>
+            
+                          <img src="../../assets/img/d35d94c490e598e3-loading-gif-transparent-loading-gif.gif" alt="" srcset="" *ngIf='hide_show_pop' class='image_1233'>
+                          <p *ngIf='!hide_show_pop'></p>
+                          <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+                            <ng-container matColumnDef="id" >
+                              <th mat-header-cell *matHeaderCellDef class=" text-primary" > S.No. </th>
+                              <td mat-cell *matCellDef="let element ; let i = index;"> {{i+1}} </td>
+                            </ng-container>
+
+                           
+                            <ng-container matColumnDef="City">
+                              <th mat-header-cell *matHeaderCellDef class=" text-primary">{{ 'HOME.city' | translate }} </th>
+                              <td mat-cell *matCellDef="let element"  style="color:blue"> 
+                                <button (click)="openDialog(element.city)" style="color:blue;background-color: white;border:1px solid white">
+                                See 
+                              </button>  </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="Province" >
+                              <th mat-header-cell *matHeaderCellDef class=" text-primary"> {{ 'HOME.Province_view' | translate }}  </th>
+                              <td mat-cell *matCellDef="let element"> {{element.province}} </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="Autonomous" >
+                              <th mat-header-cell *matHeaderCellDef class=" text-primary"> {{ 'HOME.Autonomous_view' | translate }}  </th>
+                              <td mat-cell *matCellDef="let element"> {{element.area}} </td>
+                            </ng-container>
+
+                           
+                            <ng-container matColumnDef="Country" >
+                              <th mat-header-cell *matHeaderCellDef class=" text-primary">{{ 'HOME.Country' | translate }} </th>
+                              <td mat-cell *matCellDef="let element"> {{element.country}} </td>
+                            </ng-container> 
+
+                            <ng-container matColumnDef="Water" > 
+                              <th mat-header-cell *matHeaderCellDef class=" text-primary"> {{ 'HOME.Water_Drinkable' | translate }}  </th>
+                              <td mat-cell *matCellDef="let element"> {{element.drinkable}} </td>
+                            </ng-container>
+
+                             <ng-container matColumnDef="Date" >
+                              <th mat-header-cell *matHeaderCellDef class=" text-primary">  {{ 'HOME.Date_last_edited' | translate }} </th>
+                              <td mat-cell *matCellDef="let element"> {{element.updatedAt | date : "dd/MM/y"}} </td>
+                            </ng-container>
+
+                            <!-- Submitted date -->
+
+                            <ng-container matColumnDef="Submitted date" >
+                              <th mat-header-cell *matHeaderCellDef class=" text-primary">  Submitted date </th>
+                              <td mat-cell *matCellDef="let element"> {{element.submitted_date | date : "dd/MM/y"}} </td>
+                            </ng-container>                       
+
+                         
+
+                            <ng-container matColumnDef="view" (click)="_show=false">
+                              <th mat-header-cell *matHeaderCellDef class=" text-primary"> {{ 'HOME.Action' | translate }} </th>
+                              <td mat-cell *matCellDef="let element">
+                                <button mat-raised-button type="submit" class="btn btn-danger" style="margin: 4px;" (click)="view(element._id)">{{ 'HOME.View&edit' | translate }}</button> 
+                                <button mat-raised-button type="submit" class="btn " style="margin: 4px;background:red;color:white;" (click)="delete(element._id)">{{ 'HOME.Delete' | translate }}</button> 
+                               
+                              </td>
+                            </ng-container>
+
+                            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                          </table>
+                          <mat-paginator [length]="100"
+                          [pageSize]="10"
+                          [pageSizeOptions]="[10, 25, 50, 100]">
+                         </mat-paginator>
+
+             
+      </div>
+    </div>
+  </div>
+</div>

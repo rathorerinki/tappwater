@@ -1,0 +1,83 @@
+
+<!-- <app-topbar></app-topbar> -->
+
+<div class="app-topbar">
+    
+<!-- <header>
+    <div class="row">
+      <div class="col-sm-4 col-md-4">  
+        <label>  
+          <select #langSelect (change)="function1(lang_data=translate.use(langSelect.value),langSelect.value)">
+            <option *ngFor="let lang of translate.getLangs()"  [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
+          </select>
+        </label>
+      </div>
+ 
+  
+    <div class="col-sm-6 col-md-6 ">   
+      <h2 style="color:white;font-size:25px;margin-left:10%">
+        {{ 'HOME.TITLE' | translate }}</h2>   
+     </div>
+  <div class="col-sm-2 col-md-2">
+  <div style="float:right">
+    <a ><i class="fa fa-shopping-cart"></i></a> &nbsp;&nbsp;
+    <a ><i class="fa fa-user-circle" aria-hidden="true"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+  </div>
+   
+  </div>
+  
+  </div>
+  </header> -->
+  
+  <mat-toolbar>
+    
+        <div class="left"><img src="/../../assets/logo-wbg.svg"></div>
+
+  
+  </mat-toolbar>
+</div>
+<div class="container" >
+    <div class="row margin_top">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 col-xs-12 col-sm-12">
+
+            <img src="../../assets/background@2x.png" >
+            <h1>           
+
+                {{ 'HOME.heading1' | translate }}<br>{{ 'HOME.heading2' | translate }}
+            </h1>
+            <p>
+
+                {{ 'HOME.subheading1' | translate }}  
+            </p>
+            <form class="form">
+                <input type="text" [placeholder]="'HOME.placeholder' | translate" name="postcode" [(ngModel)]="data.postcode">
+
+              <!-- <br> -->
+                <mat-form-field class="select">
+                 <mat-select [(value)]="selectedCode" (selectionChange)="function1(lang_data=translate.use(selectedCode),selectedCode)">
+                  <mat-option class="option_item" *ngFor="let language of languages" [value]="language.value">
+                      <img class="select_img"src='{{language.img}}'> {{language.viewValue}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+                <img class="select_img position_img" *ngIf='path' src='../../assets/english.png'>
+                <img class="select_img position_img" *ngIf='!path' src='../../assets/spanish.png'>              
+                <!-- <br> -->
+                <button class="button_reset" type="submit" (click)="okay()" [disabled]="!data.postcode"> {{ 'HOME.Ok' | translate }} </button>
+            </form>
+            
+       
+        <div class="top">
+            <span>* TAPP Water will continue to add cities in Spain over the coming <br>months targeting 98% of the population by end of 2020.</span>
+
+        </div>
+
+
+        </div>
+        <div class="col-md-3"></div>
+        
+        
+        </div>
+</div>
+

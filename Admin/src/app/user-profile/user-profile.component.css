@@ -1,0 +1,202 @@
+.tablinks{
+    border-radius: 3rem;
+    width: 30%;
+    background-color: white;
+    color: orange;
+    font-weight: 600;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  .row.style_change.ng-star-inserted:nth-child(odd) {
+    background: #e7dfdf5e;
+    padding-top: 15px;
+  }
+  ::ng-deep .mat-form-field {
+    font-size: inherit;
+    font-weight: 400;
+    line-height: 1.125;
+    width: 100%;
+    font-family: Roboto,"Helvetica Neue",sans-serif;
+}
+  td input, button, select, optgroup, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    width: 100%;
+    border: 1px solid white;
+}
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+ 
+
+/* input, button, select, optgroup, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    width: 100%;
+    height: 26px;
+    border: 1px solid white;
+} */
+.ng-star-inserted {
+    margin: 4px 0px;
+}
+.tablinks1{
+    /*border-radius: 3rem;
+   width: 50%;
+    background-color: grey;
+    color: white;
+    font-weight: 600;
+    border: 2px solid #5a5752;*/
+    border-radius: 3rem;
+    width: 40%;;
+    background-color: grey;
+    color: white;
+    font-weight: 600;
+    border: 2px solid grey;
+
+}
+.font_color{
+   color: orange;
+    font-size: 1rem;
+    line-height: 2;
+}
+.input1 input[type="text"] {
+    border: 1px solid white;
+    width:100%;
+    height: 29px;
+  }
+  .head.special1 {
+    background: #80808045;
+  }
+  .head.special {
+    background: #007bff1f;
+    border-radius: 0;
+  }
+  select.input_select {
+    width: 100%;
+    height: 29px;
+    border: 1px solid white;
+  }
+  h3, .h3 {
+    font-size: 16px;
+    line-height: 1em;
+    margin-bottom: -31px !important;
+    text-align: left;
+  }
+  .head {
+    border: 1px solid gray;
+    line-height: 2;
+    padding-left: 6px;
+    margin: 2px;
+    width: 100%;
+  }
+.div_1{
+    border: 1px solid #E3E3E3;
+    /* border-radius: 30px; */
+    color: #2c2c2c;
+    background: #a39e9e30;
+    width: 100%;
+    height: calc(2.25rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 0.8rem;
+  }
+.sidebar[data-color="red"]:after, .off-canvas-sidebar[data-color="red"]:after {
+    background: orange;
+}
+.btn-danger {
+    background-color: #ffa500;
+    color: #FFFFFF;
+}
+.description, .card-description, .footer-big p, .card .footer .stats {
+    color: #8d8e94;
+    font-weight: 400;
+}
+.table > thead > tr > th {
+    border-bottom-width: 1px;
+    font-size: 1rem;
+    font-weight: 300;
+    border: 0;
+    color: #f96332;
+    font-weight: 600;
+}
+.btn-danger[_ngcontent-c5] {
+    background-color: #ffa500;
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.fa, .fab, .fal, .far, .fas {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    color: orange;
+}
+.uploaded{
+    text-align: center;
+    width: 90%;
+    background-color: white;
+    height: 3rem;
+    border-radius: 1.2rem;
+    margin: %;
+    font-size: 1rem;
+    font-weight: 600;
+    color: gray;
+    border: solid gray 2px;
+}
+.special{
+    border-radius: 2rem;
+    border: solid 1px #E3E3E3;
+    
+
+}
+
+
+@media screen and (min-width: 601px) {
+ .uploaded{
+    text-align: center;
+    width: 90%;
+    background-color: white;
+    height: 3rem;
+    border-radius: 1.2rem;
+    margin: 0%;
+    font-size: 1rem;
+    font-weight: 600;
+    color: gray;
+    border: solid gray 2px;
+}
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+  .uploaded{
+    text-align: center;
+    width: 90%;
+    background-color: white;
+    height: 3rem;
+    border-radius: 1.2rem;
+    margin: 0%;
+    font-size: 1rem;
+    font-weight: 600;
+    color: gray;
+    border: solid gray 2px;
+}
+}
+.selctoption mat-form-field {
+    width: 100%;
+}

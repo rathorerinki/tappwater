@@ -1,0 +1,22 @@
+<!-- <app-topbar></app-topbar> -->
+
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6 col-xs-12">
+    
+        <div class="image">
+            <div class="margin_left">
+                <h1>
+                    {{ 'conformation.heading1' | translate }}
+                     <br> {{ 'conformation.heading2' | translate }} <br>  {{ 'conformation.heading3' | translate }}
+                </h1>
+    <br>
+    <br>
+                <button class="button_reset" type="submit" (click)="okay()" [disabled]="!data.postcode">Back</button>
+            </div>
+
+            
+        </div>
+    <div class="col-md-3"></div>  
+    
+    </div>

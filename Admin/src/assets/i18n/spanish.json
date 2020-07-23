@@ -1,0 +1,185 @@
+{
+    "HOME": {
+      "login":"Iniciar sesión",
+      "Admin":"Inicio de sesión de administrador",
+      "TITLE": "Bonjour Angular avec ngx-translate !",
+      "SELECT": "Seleccione el idioma",
+      "Add_report":"Agregar informe",
+      "Edit_report":"Editar informe",
+      "View_report":"Vista del informe",
+      "subheading":"Porfavor complete todos los campos",
+      "city":"Ciudad",
+      "Water_Drinkable":"Agua potable",
+      "Action":"Acción",
+      "Search":"Buscar",
+      "Delete":"Borrar",
+      "change":"Cambio",
+      "View&edit":"Ver y editar",
+      "filtering":"Filtrado TAPP",
+      "Recommended":"Recomendada",
+      "max":"Max",
+      "D 2 4":"D 2 4",
+      "PRIORITY":"prioridad", 
+      "TAPP_filtering":"Después de filtrar",
+      "Before":"Antes de filtrar",
+      "Barcelona_Zone_D":"Barcelona Zone D",
+      "Barcelona_Zone_E":"Barcelona Zone E",
+      "Change_values":"Valores predeterminados",
+      
+      "Alicante":"Alicante",
+      "Valencia":"Valencia",
+      "save":"Salvar",
+
+      "city_enter":"Entrar ciudad",
+      "Autonomous_region":"Zona (si corresponde)",
+      "Autonomous_region_enter":"Entrar Descripción de zona",
+      "Province":"Provincia (si corresponde)",
+      "Province_view":"Provincia",
+      "Autonomous_view":"Zona",
+      "Province_enter":"Entrar provincia",
+      "Country":"País",
+      "Country_enter":"Entrar País",
+      "Post_code_Range":"Rango de código postal",
+      "To":"A",
+      "From":"Desde",
+      "Date":"Fecha",
+      "Date_last_edited":"Fecha de última edición",
+      "Drinkable":"Seguro para beber",
+      "Utlity":"Utilidad",
+      "Utlity_enter":"Ingresar utilidad",
+      "Yes":"Sí",
+      "No":"No",
+      "Choose":"Escoger",
+      "Next":"siguiente",
+      "Back":"Atrás",
+      "Done":"Enviar",
+      "Admin_logout":"Administración",
+      "Water_safety":"Seguridad del agua",
+      "Particulars":"Sustancia",
+      "Value":"Valor",
+      "Unit":"Unidad",
+      "Free_Chlorine":"Cloro Libre Residual",
+      "Total_Chlorine":"Cloro Combinado Residual",
+      "Total Chlorine":"Cloro Combinado Residual",
+      "Chloramine":"Cloramina",
+      "General":"General",
+      "Temperature":"Temperatura",
+      "Hardness":"Dureza",
+      "Hardness f":"Dureza (F)",
+      "Turbidity":"Turbidez",
+      "Conductivity":"Conductividad",
+      "Taste":"Gusto",
+      "Microplastics":"Microplastico",
+      "LSI":"Indice Langelier",
+      "Bicarbonate":"Bicarbonatos",
+      "Oxidation":"Oxidabilidad ",
+
+      "Pathogens":"Patógenos",
+      "Clostridium":"Clostridium",
+
+      "eColi":"e.coli",
+      "Enterococcus":"Enterococo",
+      "Microbial_Cysts":"Quistes microbianos",
+      "Microbial Cysts":"Quistes microbianos",
+      "Chemical_parameters":"Parámetros químicos",
+      "Cyanide_total":"Total de cianina",
+      "Cyanide total":"Total de cianina",
+      "Fluoride":"Fluoruro",
+      "Mercury":"Mercurio",
+      "Nitrites":"Nitritos",
+      "Nitrates":"Nitrato",
+
+
+
+
+      "Minerals":"Minerales",
+      "Magnesium":"Magnesio",
+      "Calcium":"Calcio",
+      "Potassium":"Potasio",
+      "Chloride":"Cloruro",
+
+
+      "Metals":"Rieles",
+      "Aluminium":"Aluminio",
+      "Antimony":"Antimonio",
+      "Arsenic":"Arsénica",
+      "Barium":"Boro",
+      "Cadmium":"Cadmio",
+      "Chromium":"Cromo",
+      "Copper":"Cobre",
+      "Iron":"Hierro",
+      "Lead":"Plomo",
+      "Manganese":"Manganeso",
+      "Nickel":"Níquel",
+      "Selenium":"Selenio",
+      "Sodium":"Sodio",
+      "Zinc":"Zinc",
+
+      "Chlorine_bi_products":"Biproductos de cloro",
+      "Dichloromethane":"Dibromoclorometano",
+      "Total_Trichloroethylene":"Total Trichloroethylene",
+      "Total Trichloroethylene":"Total Trichloroethylene",
+      "Trichloroethylene":"Tricloroetileno",
+      "Tetrachloroethylene":"Tetracloroetileno",
+      "Total_Trihalomethanes":"Total Trihalometanos",
+      "Total Trihalomethanes":"Total Trihalometanos",
+
+
+      "HAAs":"HAAs",
+      "Total_haloacetic_acids":"Ácidos haloacéticos totales",
+      "Total haloacetic acids":"Ácidos haloacéticos totales",
+
+      "Pesticides":"Pesticidas",
+      "Chlordane":"Clordano",
+      "Heptachlor":"Heptacloro",
+      "Lindane":"Lindano",
+      "Total_pesticides":"Pesticidas totales",
+      "Total pesticides":"Pesticidas totales",
+
+
+
+      "Herbicides":"Herbicidas",
+      "2,4-D":"2,4 -D",
+      "2,4 -D":"2,4 -D",
+      "Atrazine":"Atrazina",
+      "Total_Herbicides":"Total Herbicides",
+      "Total Herbicides":"Total Herbicides",
+
+      "Perfluorinated_chemicals_(PFAS)":"Productos químicos perfluorados (PFAS)",
+      "Perfluorinated chemicals (PFAS)":"Productos químicos perfluorados (PFAS)",
+      "PFOA":"PFOA",
+      "PFOS":"PFOS",
+      "PFNA":"PFNA",
+
+  
+      "Other":"Otra",
+      "Ammonia":"Amoníaco",
+      "Asbestos":"Asbesto",
+      "Perchlorate":"Perclorato",
+      "Polonium":"Polonio",
+      "Radium":"Radio",
+      "Silver":"Plata",
+      "Sulfate":"Sulfato",
+      "Uranium":"Uranio",
+
+
+      
+      "Pharmaceuticals":"Productos farmacéuticos",
+      "Atenolol":"Atenolol",
+      "Carbamazepine":"Carbamazepina",
+      "Estrone":"Estrona",
+      "Meprobamat":"Meprobamat",
+      "Trimethoprim":"Trimetoprima",
+      "Average_data_range":"Average data range",
+      "Start_date" : "Start date",
+      "End_date" : "End date"
+
+
+
+
+
+
+
+    }
+  }
+  

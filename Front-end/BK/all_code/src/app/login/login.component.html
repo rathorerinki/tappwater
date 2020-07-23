@@ -1,0 +1,94 @@
+
+<app-topbar></app-topbar>
+<div class="top_pending">
+<h1>MyTAPP es un servicio gratuíto para TAPPY customers</h1>
+<div class="container" >
+    <div class="row" style="text-align: center; margin-top: 52px;">
+      <div class="col-sm-4 col-md-4">
+ 
+        <a class="icons"> <img src="../../assets/icons8-android-100.png"></a>
+        <p class="para">Traquea el estado de tu filtro y recibe notificaciones cuando tengas que cambiar el cartucho</p>
+      </div>
+      <div class="col-sm-4 col-md-4">
+    
+        <a class="icons"> <img src="../../assets/image_2020_01_09T08_23_29_036Z.png"></a>
+        <p class="para">Traquea el estado de tu filtro y recibe notificaciones cuando tengas que cambiar el cartucho</p>
+      </div>
+      <div class="col-sm-4 col-md-4">
+      
+        <a class="icons"> <img src="../../assets/icons8-checkmark-512.png"></a>
+        <p class="para">Traquea el estado de tu filtro y recibe notificaciones cuando tengas que cambiar el cartucho</p>
+      </div>
+    </div>
+
+    <div class="row margin" >
+      <div class="col-md-12">
+        <h1 style=""> Entra en tu Perfil</h1>
+
+
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+
+        <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  
+        
+
+          <!-- <div class="margin-top">
+            <input type="text" id="floating_name" formControlName="firstName" value="">
+            <span class="floating-label">Email</span>
+          </div>
+         
+
+          <div class="margin-top">
+            <input type="text" id="lastname" formControlName="lastName" value="">
+            <span class="lastname">Contraseña</span>
+
+          </div> -->
+         
+       
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Email" [formControl]="email" required>
+            <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+          </mat-form-field>
+          
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Contraseña" required>
+            <!-- <mat-error *ngIf="password.invalid">{{getErrorMessage()}}</mat-error> -->
+            </mat-form-field>
+          
+          
+
+          <div style="text-align: left;">
+            <br>
+            <br>
+            <p  style="font-size:16px;color:teal">¿Olvidaste tu contraseña?</p>
+          </div>
+
+
+          
+          <button class="button" type="submit" [disabled]="!profileForm.valid">Entrar</button>
+
+          
+          <button class="button_reset" type="submit" [disabled]="!profileForm.valid">Crear perfil</button>
+        </form>
+
+
+        
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+
+</div>
